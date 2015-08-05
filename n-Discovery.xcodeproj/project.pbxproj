@@ -15,6 +15,12 @@
 		A08D1B1D1B6AF22F00250E14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A08D1B1C1B6AF22F00250E14 /* Images.xcassets */; };
 		A08D1B201B6AF22F00250E14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08D1B1E1B6AF22F00250E14 /* LaunchScreen.xib */; };
 		A08D1B2C1B6AF22F00250E14 /* n_DiscoveryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A08D1B2B1B6AF22F00250E14 /* n_DiscoveryTests.m */; };
+		A09447231B6AF839009268C6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A09447221B6AF839009268C6 /* Settings.bundle */; };
+		A09447251B6AFD61009268C6 /* CVNPpos.GPX in Resources */ = {isa = PBXBuildFile; fileRef = A09447241B6AFD61009268C6 /* CVNPpos.GPX */; };
+		A094472D1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A094472C1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m */; };
+		A09447341B71B312009268C6 /* NDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09447321B71B312009268C6 /* NDRootViewController.m */; };
+		A09447371B71B877009268C6 /* NDMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09447361B71B877009268C6 /* NDMainMenuViewController.m */; };
+		A094473D1B71C5DD009268C6 /* NDMapBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A094473C1B71C5DD009268C6 /* NDMapBoxViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,16 @@
 		A08D1B251B6AF22F00250E14 /* n-DiscoveryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "n-DiscoveryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08D1B2A1B6AF22F00250E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A08D1B2B1B6AF22F00250E14 /* n_DiscoveryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = n_DiscoveryTests.m; sourceTree = "<group>"; };
+		A09447221B6AF839009268C6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		A09447241B6AFD61009268C6 /* CVNPpos.GPX */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CVNPpos.GPX; sourceTree = "<group>"; };
+		A094472B1B7187A7009268C6 /* RMUserTrackingBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMUserTrackingBarButtonItem.h; sourceTree = "<group>"; };
+		A094472C1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMUserTrackingBarButtonItem.m; sourceTree = "<group>"; };
+		A09447321B71B312009268C6 /* NDRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDRootViewController.m; path = Controller/NDRootViewController.m; sourceTree = "<group>"; };
+		A09447331B71B312009268C6 /* NDRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDRootViewController.h; path = Controller/NDRootViewController.h; sourceTree = "<group>"; };
+		A09447351B71B877009268C6 /* NDMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDMainMenuViewController.h; path = Controller/NDMainMenuViewController.h; sourceTree = "<group>"; };
+		A09447361B71B877009268C6 /* NDMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDMainMenuViewController.m; path = Controller/NDMainMenuViewController.m; sourceTree = "<group>"; };
+		A094473B1B71C5DD009268C6 /* NDMapBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDMapBoxViewController.h; path = Controller/NDMapBoxViewController.h; sourceTree = "<group>"; };
+		A094473C1B71C5DD009268C6 /* NDMapBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDMapBoxViewController.m; path = Controller/NDMapBoxViewController.m; sourceTree = "<group>"; };
 		BB1C20950DF3557B5E96225A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E403A3994282993AF7E8CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +113,7 @@
 		A08D1B0E1B6AF22F00250E14 /* n-Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				A09447311B71B2E3009268C6 /* Controller */,
 				A08D1B131B6AF22F00250E14 /* AppDelegate.h */,
 				A08D1B141B6AF22F00250E14 /* AppDelegate.m */,
 				A08D1B161B6AF22F00250E14 /* ViewController.h */,
@@ -104,6 +121,9 @@
 				A08D1B191B6AF22F00250E14 /* Main.storyboard */,
 				A08D1B1C1B6AF22F00250E14 /* Images.xcassets */,
 				A08D1B1E1B6AF22F00250E14 /* LaunchScreen.xib */,
+				A09447241B6AFD61009268C6 /* CVNPpos.GPX */,
+				A094472B1B7187A7009268C6 /* RMUserTrackingBarButtonItem.h */,
+				A094472C1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m */,
 				A08D1B0F1B6AF22F00250E14 /* Supporting Files */,
 			);
 			path = "n-Discovery";
@@ -112,6 +132,7 @@
 		A08D1B0F1B6AF22F00250E14 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A09447221B6AF839009268C6 /* Settings.bundle */,
 				A08D1B101B6AF22F00250E14 /* Info.plist */,
 				A08D1B111B6AF22F00250E14 /* main.m */,
 			);
@@ -133,6 +154,19 @@
 				A08D1B2A1B6AF22F00250E14 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A09447311B71B2E3009268C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A09447331B71B312009268C6 /* NDRootViewController.h */,
+				A09447321B71B312009268C6 /* NDRootViewController.m */,
+				A09447351B71B877009268C6 /* NDMainMenuViewController.h */,
+				A09447361B71B877009268C6 /* NDMainMenuViewController.m */,
+				A094473B1B71C5DD009268C6 /* NDMapBoxViewController.h */,
+				A094473C1B71C5DD009268C6 /* NDMapBoxViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		A3A208CD240441F3A114A87F /* Frameworks */ = {
@@ -195,6 +229,11 @@
 				TargetAttributes = {
 					A08D1B0B1B6AF22F00250E14 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					A08D1B241B6AF22F00250E14 = {
 						CreatedOnToolsVersion = 6.4;
@@ -226,9 +265,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09447231B6AF839009268C6 /* Settings.bundle in Resources */,
 				A08D1B1B1B6AF22F00250E14 /* Main.storyboard in Resources */,
 				A08D1B201B6AF22F00250E14 /* LaunchScreen.xib in Resources */,
 				A08D1B1D1B6AF22F00250E14 /* Images.xcassets in Resources */,
+				A09447251B6AFD61009268C6 /* CVNPpos.GPX in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +336,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A08D1B181B6AF22F00250E14 /* ViewController.m in Sources */,
+				A094473D1B71C5DD009268C6 /* NDMapBoxViewController.m in Sources */,
+				A09447341B71B312009268C6 /* NDRootViewController.m in Sources */,
+				A094472D1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m in Sources */,
 				A08D1B151B6AF22F00250E14 /* AppDelegate.m in Sources */,
+				A09447371B71B877009268C6 /* NDMainMenuViewController.m in Sources */,
 				A08D1B121B6AF22F00250E14 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -411,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -424,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "n-Discovery/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -435,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "n-Discovery/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

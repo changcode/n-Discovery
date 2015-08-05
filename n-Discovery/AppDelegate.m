@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MapboxGL.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [MGLAccountManager setAccessToken:@"pk.eyJ1IjoiY2hhbmdzaHUxOTkxIiwiYSI6InlQbmlERXMifQ.c12pyT4RSGAc6N0eloV3Eg"];
     return YES;
 }
 
