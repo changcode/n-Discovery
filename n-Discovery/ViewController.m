@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
 //    NSURL *styleURL = [NSURL URLWithString:@"asset://styles/dark-v7.json"];
 //    self.mapView = [[MGLMapView alloc] initWithFrame:self.view.bounds
 //                                            styleURL:styleURL];
@@ -67,4 +67,5 @@
 - (BOOL)mapView:(MGLMapView *)mapView annotationCanShowCallout:(id <MGLAnnotation>)annotation {
     return YES;
 }
+
 @end

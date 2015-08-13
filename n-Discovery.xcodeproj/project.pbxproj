@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7D78591C34CC645CCA28ABB9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1C20950DF3557B5E96225A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A07031691B72485500F02AD9 /* NDLearnAsUGoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07031681B72485500F02AD9 /* NDLearnAsUGoTableViewController.m */; };
+		A070316E1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A070316D1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.m */; };
+		A07031751B724C1500F02AD9 /* ListImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A07031741B724C1500F02AD9 /* ListImageCell.m */; };
 		A08D1B121B6AF22F00250E14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A08D1B111B6AF22F00250E14 /* main.m */; };
 		A08D1B151B6AF22F00250E14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A08D1B141B6AF22F00250E14 /* AppDelegate.m */; };
 		A08D1B181B6AF22F00250E14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08D1B171B6AF22F00250E14 /* ViewController.m */; };
@@ -21,6 +24,22 @@
 		A09447341B71B312009268C6 /* NDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09447321B71B312009268C6 /* NDRootViewController.m */; };
 		A09447371B71B877009268C6 /* NDMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09447361B71B877009268C6 /* NDMainMenuViewController.m */; };
 		A094473D1B71C5DD009268C6 /* NDMapBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A094473C1B71C5DD009268C6 /* NDMapBoxViewController.m */; };
+		A0A9ADD41B7A62DE00B1E15B /* trails8.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD31B7A62DE00B1E15B /* trails8.geojson */; };
+		A0A9ADD61B7A758800B1E15B /* facilities.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD51B7A758800B1E15B /* facilities.geojson */; };
+		A0A9ADE31B7A803600B1E15B /* userpic6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD71B7A803600B1E15B /* userpic6.jpg */; };
+		A0A9ADE41B7A803600B1E15B /* userpic5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD81B7A803600B1E15B /* userpic5.jpg */; };
+		A0A9ADE51B7A803600B1E15B /* userpic4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD91B7A803600B1E15B /* userpic4.jpg */; };
+		A0A9ADE61B7A803600B1E15B /* userpic3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADDA1B7A803600B1E15B /* userpic3.jpg */; };
+		A0A9ADE71B7A803600B1E15B /* userpic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADDB1B7A803600B1E15B /* userpic2.jpg */; };
+		A0A9ADE81B7A803600B1E15B /* userpic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADDC1B7A803600B1E15B /* userpic1.jpg */; };
+		A0A9ADE91B7A803600B1E15B /* photo6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADDD1B7A803600B1E15B /* photo6.jpg */; };
+		A0A9ADEA1B7A803600B1E15B /* photo5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADDE1B7A803600B1E15B /* photo5.jpg */; };
+		A0A9ADEB1B7A803600B1E15B /* photo4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADDF1B7A803600B1E15B /* photo4.jpg */; };
+		A0A9ADEC1B7A803600B1E15B /* photo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADE01B7A803600B1E15B /* photo3.jpg */; };
+		A0A9ADED1B7A803600B1E15B /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADE11B7A803600B1E15B /* photo2.jpg */; };
+		A0A9ADEE1B7A803600B1E15B /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADE21B7A803600B1E15B /* photo1.jpg */; };
+		A0A9ADF11B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9ADEF1B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m */; };
+		A0A9ADF31B7A9B0C00B1E15B /* Directions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADF21B7A947E00B1E15B /* Directions.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +54,12 @@
 
 /* Begin PBXFileReference section */
 		3722C1D2D8998550890ADF8E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A07031671B72485500F02AD9 /* NDLearnAsUGoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDLearnAsUGoTableViewController.h; path = Controller/NDLearnAsUGoTableViewController.h; sourceTree = "<group>"; };
+		A07031681B72485500F02AD9 /* NDLearnAsUGoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDLearnAsUGoTableViewController.m; path = Controller/NDLearnAsUGoTableViewController.m; sourceTree = "<group>"; };
+		A070316C1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDLearnAsUGoHeaderView.h; path = LearnAsUGo/View/NDLearnAsUGoHeaderView.h; sourceTree = "<group>"; };
+		A070316D1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDLearnAsUGoHeaderView.m; path = LearnAsUGo/View/NDLearnAsUGoHeaderView.m; sourceTree = "<group>"; };
+		A07031731B724C1500F02AD9 /* ListImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListImageCell.h; path = LearnAsUGo/View/ListImageCell.h; sourceTree = "<group>"; };
+		A07031741B724C1500F02AD9 /* ListImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListImageCell.m; path = LearnAsUGo/View/ListImageCell.m; sourceTree = "<group>"; };
 		A08D1B0C1B6AF22F00250E14 /* n-Discovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "n-Discovery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08D1B101B6AF22F00250E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A08D1B111B6AF22F00250E14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,6 +83,23 @@
 		A09447361B71B877009268C6 /* NDMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDMainMenuViewController.m; path = Controller/NDMainMenuViewController.m; sourceTree = "<group>"; };
 		A094473B1B71C5DD009268C6 /* NDMapBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDMapBoxViewController.h; path = Controller/NDMapBoxViewController.h; sourceTree = "<group>"; };
 		A094473C1B71C5DD009268C6 /* NDMapBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDMapBoxViewController.m; path = Controller/NDMapBoxViewController.m; sourceTree = "<group>"; };
+		A0A9ADD31B7A62DE00B1E15B /* trails8.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trails8.geojson; sourceTree = "<group>"; };
+		A0A9ADD51B7A758800B1E15B /* facilities.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = facilities.geojson; sourceTree = "<group>"; };
+		A0A9ADD71B7A803600B1E15B /* userpic6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = userpic6.jpg; path = LearnAsUGo/Resources/userpic6.jpg; sourceTree = "<group>"; };
+		A0A9ADD81B7A803600B1E15B /* userpic5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = userpic5.jpg; path = LearnAsUGo/Resources/userpic5.jpg; sourceTree = "<group>"; };
+		A0A9ADD91B7A803600B1E15B /* userpic4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = userpic4.jpg; path = LearnAsUGo/Resources/userpic4.jpg; sourceTree = "<group>"; };
+		A0A9ADDA1B7A803600B1E15B /* userpic3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = userpic3.jpg; path = LearnAsUGo/Resources/userpic3.jpg; sourceTree = "<group>"; };
+		A0A9ADDB1B7A803600B1E15B /* userpic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = userpic2.jpg; path = LearnAsUGo/Resources/userpic2.jpg; sourceTree = "<group>"; };
+		A0A9ADDC1B7A803600B1E15B /* userpic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = userpic1.jpg; path = LearnAsUGo/Resources/userpic1.jpg; sourceTree = "<group>"; };
+		A0A9ADDD1B7A803600B1E15B /* photo6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo6.jpg; path = LearnAsUGo/Resources/photo6.jpg; sourceTree = "<group>"; };
+		A0A9ADDE1B7A803600B1E15B /* photo5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo5.jpg; path = LearnAsUGo/Resources/photo5.jpg; sourceTree = "<group>"; };
+		A0A9ADDF1B7A803600B1E15B /* photo4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo4.jpg; path = LearnAsUGo/Resources/photo4.jpg; sourceTree = "<group>"; };
+		A0A9ADE01B7A803600B1E15B /* photo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo3.jpg; path = LearnAsUGo/Resources/photo3.jpg; sourceTree = "<group>"; };
+		A0A9ADE11B7A803600B1E15B /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo2.jpg; path = LearnAsUGo/Resources/photo2.jpg; sourceTree = "<group>"; };
+		A0A9ADE21B7A803600B1E15B /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo1.jpg; path = LearnAsUGo/Resources/photo1.jpg; sourceTree = "<group>"; };
+		A0A9ADEF1B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDLearnAsUGoListImageItem.m; path = LearnAsUGo/Model/NDLearnAsUGoListImageItem.m; sourceTree = "<group>"; };
+		A0A9ADF01B7A804C00B1E15B /* NDLearnAsUGoListImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDLearnAsUGoListImageItem.h; path = LearnAsUGo/Model/NDLearnAsUGoListImageItem.h; sourceTree = "<group>"; };
+		A0A9ADF21B7A947E00B1E15B /* Directions.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Directions.geojson; sourceTree = "<group>"; };
 		BB1C20950DF3557B5E96225A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E403A3994282993AF7E8CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +132,55 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A070316A1B72498A00F02AD9 /* LearnAsUGo */ = {
+			isa = PBXGroup;
+			children = (
+				A07031761B724C9400F02AD9 /* Resources */,
+				A07031721B724A7A00F02AD9 /* Model */,
+				A070316B1B7249B500F02AD9 /* View */,
+			);
+			name = LearnAsUGo;
+			sourceTree = "<group>";
+		};
+		A070316B1B7249B500F02AD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A070316C1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.h */,
+				A070316D1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.m */,
+				A07031731B724C1500F02AD9 /* ListImageCell.h */,
+				A07031741B724C1500F02AD9 /* ListImageCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A07031721B724A7A00F02AD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0A9ADEF1B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m */,
+				A0A9ADF01B7A804C00B1E15B /* NDLearnAsUGoListImageItem.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A07031761B724C9400F02AD9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0A9ADD71B7A803600B1E15B /* userpic6.jpg */,
+				A0A9ADD81B7A803600B1E15B /* userpic5.jpg */,
+				A0A9ADD91B7A803600B1E15B /* userpic4.jpg */,
+				A0A9ADDA1B7A803600B1E15B /* userpic3.jpg */,
+				A0A9ADDB1B7A803600B1E15B /* userpic2.jpg */,
+				A0A9ADDC1B7A803600B1E15B /* userpic1.jpg */,
+				A0A9ADDD1B7A803600B1E15B /* photo6.jpg */,
+				A0A9ADDE1B7A803600B1E15B /* photo5.jpg */,
+				A0A9ADDF1B7A803600B1E15B /* photo4.jpg */,
+				A0A9ADE01B7A803600B1E15B /* photo3.jpg */,
+				A0A9ADE11B7A803600B1E15B /* photo2.jpg */,
+				A0A9ADE21B7A803600B1E15B /* photo1.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		A08D1B031B6AF22F00250E14 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +204,7 @@
 		A08D1B0E1B6AF22F00250E14 /* n-Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				A070316A1B72498A00F02AD9 /* LearnAsUGo */,
 				A09447311B71B2E3009268C6 /* Controller */,
 				A08D1B131B6AF22F00250E14 /* AppDelegate.h */,
 				A08D1B141B6AF22F00250E14 /* AppDelegate.m */,
@@ -122,6 +214,9 @@
 				A08D1B1C1B6AF22F00250E14 /* Images.xcassets */,
 				A08D1B1E1B6AF22F00250E14 /* LaunchScreen.xib */,
 				A09447241B6AFD61009268C6 /* CVNPpos.GPX */,
+				A0A9ADF21B7A947E00B1E15B /* Directions.geojson */,
+				A0A9ADD31B7A62DE00B1E15B /* trails8.geojson */,
+				A0A9ADD51B7A758800B1E15B /* facilities.geojson */,
 				A094472B1B7187A7009268C6 /* RMUserTrackingBarButtonItem.h */,
 				A094472C1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m */,
 				A08D1B0F1B6AF22F00250E14 /* Supporting Files */,
@@ -165,6 +260,8 @@
 				A09447361B71B877009268C6 /* NDMainMenuViewController.m */,
 				A094473B1B71C5DD009268C6 /* NDMapBoxViewController.h */,
 				A094473C1B71C5DD009268C6 /* NDMapBoxViewController.m */,
+				A07031671B72485500F02AD9 /* NDLearnAsUGoTableViewController.h */,
+				A07031681B72485500F02AD9 /* NDLearnAsUGoTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -265,11 +362,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A9ADF31B7A9B0C00B1E15B /* Directions.geojson in Resources */,
+				A0A9ADD61B7A758800B1E15B /* facilities.geojson in Resources */,
 				A09447231B6AF839009268C6 /* Settings.bundle in Resources */,
+				A0A9ADE81B7A803600B1E15B /* userpic1.jpg in Resources */,
 				A08D1B1B1B6AF22F00250E14 /* Main.storyboard in Resources */,
 				A08D1B201B6AF22F00250E14 /* LaunchScreen.xib in Resources */,
+				A0A9ADE91B7A803600B1E15B /* photo6.jpg in Resources */,
+				A0A9ADE71B7A803600B1E15B /* userpic2.jpg in Resources */,
+				A0A9ADED1B7A803600B1E15B /* photo2.jpg in Resources */,
+				A0A9ADEB1B7A803600B1E15B /* photo4.jpg in Resources */,
+				A0A9ADE51B7A803600B1E15B /* userpic4.jpg in Resources */,
+				A0A9ADE31B7A803600B1E15B /* userpic6.jpg in Resources */,
+				A0A9ADEC1B7A803600B1E15B /* photo3.jpg in Resources */,
 				A08D1B1D1B6AF22F00250E14 /* Images.xcassets in Resources */,
+				A0A9ADEA1B7A803600B1E15B /* photo5.jpg in Resources */,
+				A0A9ADEE1B7A803600B1E15B /* photo1.jpg in Resources */,
 				A09447251B6AFD61009268C6 /* CVNPpos.GPX in Resources */,
+				A0A9ADE41B7A803600B1E15B /* userpic5.jpg in Resources */,
+				A0A9ADE61B7A803600B1E15B /* userpic3.jpg in Resources */,
+				A0A9ADD41B7A62DE00B1E15B /* trails8.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +449,10 @@
 			files = (
 				A08D1B181B6AF22F00250E14 /* ViewController.m in Sources */,
 				A094473D1B71C5DD009268C6 /* NDMapBoxViewController.m in Sources */,
+				A07031691B72485500F02AD9 /* NDLearnAsUGoTableViewController.m in Sources */,
+				A070316E1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.m in Sources */,
+				A0A9ADF11B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m in Sources */,
+				A07031751B724C1500F02AD9 /* ListImageCell.m in Sources */,
 				A09447341B71B312009268C6 /* NDRootViewController.m in Sources */,
 				A094472D1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m in Sources */,
 				A08D1B151B6AF22F00250E14 /* AppDelegate.m in Sources */,
