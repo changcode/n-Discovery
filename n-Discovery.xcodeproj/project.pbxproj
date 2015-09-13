@@ -215,10 +215,7 @@
 				A08D1B171B6AF22F00250E14 /* ViewController.m */,
 				A08D1B191B6AF22F00250E14 /* Main.storyboard */,
 				A08D1B1E1B6AF22F00250E14 /* LaunchScreen.xib */,
-				A09447241B6AFD61009268C6 /* CVNPpos.GPX */,
-				A0A9ADF21B7A947E00B1E15B /* Directions.geojson */,
-				A0A9ADD31B7A62DE00B1E15B /* trails8.geojson */,
-				A0A9ADD51B7A758800B1E15B /* facilities.geojson */,
+				A095ACC11BA60024007B445F /* GISFile */,
 				A094472B1B7187A7009268C6 /* RMUserTrackingBarButtonItem.h */,
 				A094472C1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m */,
 				A08D1B1C1B6AF22F00250E14 /* Images.xcassets */,
@@ -269,6 +266,17 @@
 				A0D9AEF31B97748600C6B872 /* NDTestViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		A095ACC11BA60024007B445F /* GISFile */ = {
+			isa = PBXGroup;
+			children = (
+				A09447241B6AFD61009268C6 /* CVNPpos.GPX */,
+				A0A9ADF21B7A947E00B1E15B /* Directions.geojson */,
+				A0A9ADD31B7A62DE00B1E15B /* trails8.geojson */,
+				A0A9ADD51B7A758800B1E15B /* facilities.geojson */,
+			);
+			name = GISFile;
 			sourceTree = "<group>";
 		};
 		A3A208CD240441F3A114A87F /* Frameworks */ = {
