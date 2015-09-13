@@ -40,6 +40,7 @@
 		A0A9ADEE1B7A803600B1E15B /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADE21B7A803600B1E15B /* photo1.jpg */; };
 		A0A9ADF11B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9ADEF1B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m */; };
 		A0A9ADF31B7A9B0C00B1E15B /* Directions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADF21B7A947E00B1E15B /* Directions.geojson */; };
+		A0D9AEF41B97748600C6B872 /* NDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D9AEF31B97748600C6B872 /* NDTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		A0A9ADEF1B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDLearnAsUGoListImageItem.m; path = LearnAsUGo/Model/NDLearnAsUGoListImageItem.m; sourceTree = "<group>"; };
 		A0A9ADF01B7A804C00B1E15B /* NDLearnAsUGoListImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDLearnAsUGoListImageItem.h; path = LearnAsUGo/Model/NDLearnAsUGoListImageItem.h; sourceTree = "<group>"; };
 		A0A9ADF21B7A947E00B1E15B /* Directions.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Directions.geojson; sourceTree = "<group>"; };
+		A0D9AEF21B97748600C6B872 /* NDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDTestViewController.h; sourceTree = "<group>"; };
+		A0D9AEF31B97748600C6B872 /* NDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDTestViewController.m; sourceTree = "<group>"; };
 		BB1C20950DF3557B5E96225A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E403A3994282993AF7E8CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,6 +265,8 @@
 				A094473C1B71C5DD009268C6 /* NDMapBoxViewController.m */,
 				A07031671B72485500F02AD9 /* NDLearnAsUGoTableViewController.h */,
 				A07031681B72485500F02AD9 /* NDLearnAsUGoTableViewController.m */,
+				A0D9AEF21B97748600C6B872 /* NDTestViewController.h */,
+				A0D9AEF31B97748600C6B872 /* NDTestViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				A094472D1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m in Sources */,
 				A08D1B151B6AF22F00250E14 /* AppDelegate.m in Sources */,
 				A09447371B71B877009268C6 /* NDMainMenuViewController.m in Sources */,
+				A0D9AEF41B97748600C6B872 /* NDTestViewController.m in Sources */,
 				A08D1B121B6AF22F00250E14 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

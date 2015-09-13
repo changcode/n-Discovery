@@ -42,7 +42,5 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app shows your location on a map.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Location will be used</string>
 </dict>
 </plist>

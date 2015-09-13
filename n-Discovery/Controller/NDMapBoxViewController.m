@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *routeStyelSegControl;
 
 @property (strong, readwrite, nonatomic) NSMutableArray *trailsArray;
+
 @property (weak, nonatomic) IBOutlet UISwitch *trailsShowSwitch;
 
 @end

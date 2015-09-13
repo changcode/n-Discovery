@@ -93,7 +93,11 @@
         
         // Add item (image)
         //
-        [section addItem:[NDLearnAsUGoListImageItem itemWithImageNamed:dictionary[@"image"]]];
+        NDLearnAsUGoListImageItem *imageItem = [NDLearnAsUGoListImageItem itemWithImageNamed:dictionary[@"image"]];
+        [imageItem setSelectionHandler:^(RETableViewItem *imageItem) {
+            [self performSegueWithIdentifier:@"go" sender:nil];
+        }];
+        [section addItem:imageItem];
         
     }
 }
