@@ -214,7 +214,6 @@
 				A08D1B161B6AF22F00250E14 /* ViewController.h */,
 				A08D1B171B6AF22F00250E14 /* ViewController.m */,
 				A08D1B191B6AF22F00250E14 /* Main.storyboard */,
-				A08D1B1C1B6AF22F00250E14 /* Images.xcassets */,
 				A08D1B1E1B6AF22F00250E14 /* LaunchScreen.xib */,
 				A09447241B6AFD61009268C6 /* CVNPpos.GPX */,
 				A0A9ADF21B7A947E00B1E15B /* Directions.geojson */,
@@ -222,6 +221,7 @@
 				A0A9ADD51B7A758800B1E15B /* facilities.geojson */,
 				A094472B1B7187A7009268C6 /* RMUserTrackingBarButtonItem.h */,
 				A094472C1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m */,
+				A08D1B1C1B6AF22F00250E14 /* Images.xcassets */,
 				A08D1B0F1B6AF22F00250E14 /* Supporting Files */,
 			);
 			path = "n-Discovery";

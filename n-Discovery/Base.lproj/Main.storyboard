@@ -69,7 +69,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="73q-Jo-WHe">
-                        <barButtonItem key="leftBarButtonItem" image="MenuIcon" id="6Mc-hh-fgI"/>
+                        <barButtonItem key="leftBarButtonItem" image="MenuButton" id="6Mc-hh-fgI"/>
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButtonItem" destination="6Mc-hh-fgI" id="48v-k3-Eg9"/>
@@ -132,7 +132,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2ra-jK-nFP">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="MenuIcon" id="Of4-6F-owW"/>
+                        <barButtonItem key="leftBarButtonItem" image="MenuButton" id="Of4-6F-owW"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="94W-19-sEA">
                             <rect key="frame" x="72" y="7.5" width="176" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -179,7 +179,7 @@
                         <segue destination="jiy-V3-bHJ" kind="relationship" relationship="viewControllers" id="uQT-bL-qKE"/>
                         <segue destination="Cq1-Bx-Bmx" kind="relationship" relationship="viewControllers" id="Moy-lZ-ZfZ"/>
                         <segue destination="Nuq-jC-y8d" kind="relationship" relationship="viewControllers" id="VgG-QV-xxi"/>
-                        <segue destination="GfO-sc-zaR" kind="relationship" relationship="viewControllers" id="CD4-yb-ZOC"/>
+                        <segue destination="Jze-fA-pvg" kind="relationship" relationship="viewControllers" id="siZ-5I-bwL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S62-OH-f9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,7 +309,7 @@
                         <viewControllerLayoutGuide type="bottom" id="pC7-UT-nFY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vDV-jP-2I3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvk-LB-EU5">
@@ -328,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tjZ-a0-r5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="2577"/>
+            <point key="canvasLocation" x="173" y="2643"/>
         </scene>
         <!--AdvTracks-->
         <scene sceneID="q5e-Xl-4cN">
@@ -349,13 +349,53 @@
             </objects>
             <point key="canvasLocation" x="1071" y="1911"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="IYf-Rr-MYp">
+            <objects>
+                <viewController id="FsU-qF-AYS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Myf-9c-xcV"/>
+                        <viewControllerLayoutGuide type="bottom" id="0K6-tk-0Nt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xbk-wf-UeA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iSY-38-hpI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4pR-V4-gjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1491" y="2580"/>
+        </scene>
+        <!--WhatIJustSee-->
+        <scene sceneID="xSt-ui-gkr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jze-fA-pvg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="WhatIJustSee" image="TabBarWIJS" id="5gp-eX-mXh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dkh-Gx-RoR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FsU-qF-AYS" kind="relationship" relationship="rootViewController" id="ZRV-RC-PiI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rhS-XD-r6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071" y="2586"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="MenuButton" width="25" height="25"/>
         <image name="MenuIcon" width="25" height="25"/>
         <image name="TabBarAdvTracks" width="25" height="25"/>
         <image name="TabBarCitizenScience" width="25" height="25"/>
         <image name="TabBarLearnAsUGo" width="25" height="25"/>
         <image name="TabBarMap" width="25" height="25"/>
+        <image name="TabBarWIJS" width="26" height="26"/>
     </resources>
     <color key="tintColor" red="1" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
