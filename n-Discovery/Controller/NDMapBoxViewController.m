@@ -8,7 +8,7 @@
 
 #import "NDMapBoxViewController.h"
 #import "RESideMenu.h"
-#import "MapboxGL.h"
+#import "Mapbox.h"
 #import "AFNetworking.h"
 
 #define driving @"mapbox.driving"

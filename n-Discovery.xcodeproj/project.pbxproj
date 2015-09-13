@@ -24,6 +24,8 @@
 		A09447341B71B312009268C6 /* NDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09447321B71B312009268C6 /* NDRootViewController.m */; };
 		A09447371B71B877009268C6 /* NDMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09447361B71B877009268C6 /* NDMainMenuViewController.m */; };
 		A094473D1B71C5DD009268C6 /* NDMapBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A094473C1B71C5DD009268C6 /* NDMapBoxViewController.m */; };
+		A095ACC41BA6029A007B445F /* NDCitiScienceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A095ACC31BA6029A007B445F /* NDCitiScienceViewController.m */; };
+		A095ACC71BA616B3007B445F /* NDWhatIJustSeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A095ACC61BA616B3007B445F /* NDWhatIJustSeeViewController.m */; };
 		A0A9ADD41B7A62DE00B1E15B /* trails8.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD31B7A62DE00B1E15B /* trails8.geojson */; };
 		A0A9ADD61B7A758800B1E15B /* facilities.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD51B7A758800B1E15B /* facilities.geojson */; };
 		A0A9ADE31B7A803600B1E15B /* userpic6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD71B7A803600B1E15B /* userpic6.jpg */; };
@@ -84,6 +86,10 @@
 		A09447361B71B877009268C6 /* NDMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDMainMenuViewController.m; path = Controller/NDMainMenuViewController.m; sourceTree = "<group>"; };
 		A094473B1B71C5DD009268C6 /* NDMapBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDMapBoxViewController.h; path = Controller/NDMapBoxViewController.h; sourceTree = "<group>"; };
 		A094473C1B71C5DD009268C6 /* NDMapBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDMapBoxViewController.m; path = Controller/NDMapBoxViewController.m; sourceTree = "<group>"; };
+		A095ACC21BA6029A007B445F /* NDCitiScienceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDCitiScienceViewController.h; path = Controller/NDCitiScienceViewController.h; sourceTree = "<group>"; };
+		A095ACC31BA6029A007B445F /* NDCitiScienceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDCitiScienceViewController.m; path = Controller/NDCitiScienceViewController.m; sourceTree = "<group>"; };
+		A095ACC51BA616B3007B445F /* NDWhatIJustSeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDWhatIJustSeeViewController.h; path = Controller/NDWhatIJustSeeViewController.h; sourceTree = "<group>"; };
+		A095ACC61BA616B3007B445F /* NDWhatIJustSeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDWhatIJustSeeViewController.m; path = Controller/NDWhatIJustSeeViewController.m; sourceTree = "<group>"; };
 		A0A9ADD31B7A62DE00B1E15B /* trails8.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trails8.geojson; sourceTree = "<group>"; };
 		A0A9ADD51B7A758800B1E15B /* facilities.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = facilities.geojson; sourceTree = "<group>"; };
 		A0A9ADD71B7A803600B1E15B /* userpic6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = userpic6.jpg; path = LearnAsUGo/Resources/userpic6.jpg; sourceTree = "<group>"; };
@@ -264,6 +270,10 @@
 				A07031681B72485500F02AD9 /* NDLearnAsUGoTableViewController.m */,
 				A0D9AEF21B97748600C6B872 /* NDTestViewController.h */,
 				A0D9AEF31B97748600C6B872 /* NDTestViewController.m */,
+				A095ACC21BA6029A007B445F /* NDCitiScienceViewController.h */,
+				A095ACC31BA6029A007B445F /* NDCitiScienceViewController.m */,
+				A095ACC51BA616B3007B445F /* NDWhatIJustSeeViewController.h */,
+				A095ACC61BA616B3007B445F /* NDWhatIJustSeeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -467,6 +477,8 @@
 				A0A9ADF11B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m in Sources */,
 				A07031751B724C1500F02AD9 /* ListImageCell.m in Sources */,
 				A09447341B71B312009268C6 /* NDRootViewController.m in Sources */,
+				A095ACC41BA6029A007B445F /* NDCitiScienceViewController.m in Sources */,
+				A095ACC71BA616B3007B445F /* NDWhatIJustSeeViewController.m in Sources */,
 				A094472D1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m in Sources */,
 				A08D1B151B6AF22F00250E14 /* AppDelegate.m in Sources */,
 				A09447371B71B877009268C6 /* NDMainMenuViewController.m in Sources */,

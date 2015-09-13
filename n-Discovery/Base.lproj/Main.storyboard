@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1905" y="583"/>
         </scene>
-        <!--View Controller-->
+        <!--Citizen Science-->
         <scene sceneID="N7L-eS-ruF">
             <objects>
-                <viewController id="HGi-dh-bst" sceneMemberID="viewController">
+                <viewController id="HGi-dh-bst" customClass="NDCitiScienceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fMA-jm-Evn"/>
                         <viewControllerLayoutGuide type="bottom" id="IEG-OZ-nW2"/>
@@ -111,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="b7C-gF-HBH"/>
+                    <navigationItem key="navigationItem" title="Citizen Science" id="b7C-gF-HBH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLh-6v-rdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -349,10 +349,10 @@
             </objects>
             <point key="canvasLocation" x="1071" y="1911"/>
         </scene>
-        <!--View Controller-->
+        <!--What I Just See-->
         <scene sceneID="IYf-Rr-MYp">
             <objects>
-                <viewController id="FsU-qF-AYS" sceneMemberID="viewController">
+                <viewController id="FsU-qF-AYS" customClass="NDWhatIJustSeeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Myf-9c-xcV"/>
                         <viewControllerLayoutGuide type="bottom" id="0K6-tk-0Nt"/>
@@ -362,11 +362,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iSY-38-hpI"/>
+                    <navigationItem key="navigationItem" title="What I Just See" id="iSY-38-hpI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pR-V4-gjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1491" y="2580"/>
+            <point key="canvasLocation" x="1491" y="2586"/>
         </scene>
         <!--WhatIJustSee-->
         <scene sceneID="xSt-ui-gkr">
@@ -390,7 +390,7 @@
     </scenes>
     <resources>
         <image name="MenuButton" width="25" height="25"/>
-        <image name="MenuIcon" width="25" height="25"/>
+        <image name="MenuIcon" width="750" height="1334"/>
         <image name="TabBarAdvTracks" width="25" height="25"/>
         <image name="TabBarCitizenScience" width="25" height="25"/>
         <image name="TabBarLearnAsUGo" width="25" height="25"/>

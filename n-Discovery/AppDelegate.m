@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MapboxGL.h"
+#import "Mapbox.h"
 
 @interface AppDelegate ()
 

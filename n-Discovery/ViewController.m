@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "MapboxGL.h"
+#import "Mapbox.h"
 #import "RMUserTrackingBarButtonItem.h"
 #import "RESideMenu.h"
 
