@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "NDRootViewController.h"
 #import "Mapbox.h"
+#import "KCLaunchImageViewController.h"
+#import "UIImage+ForiPhone.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MGLAccountManager setAccessToken:@"pk.eyJ1IjoiY2hhbmdzaHUxOTkxIiwiYSI6InlQbmlERXMifQ.c12pyT4RSGAc6N0eloV3Eg"];
+    [self handleLaunchImage];
     return YES;
 }
 
@@ -41,6 +45,23 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma-mark ThirdpartMethods
+- (void)handleLaunchImage
+{
+    UIImageView *splashScreen = [[UIImageView alloc] initWithImage:[UIImage autoSelectImageWithImageName:@"FakeLaunchImage"]];
+    [self.window addSubview:splashScreen];
+    
+    
+    NDRootViewController *startUpViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"NDrootViewController"];;
+    self.window.rootViewController =
+    [KCLaunchImageViewController addTransitionToViewController:startUpViewController
+                                          modalTransitionStyle:UIModalTransitionStyleCrossDissolve
+                                                 withImageName:@"DisplayImage"
+                                                     taskBlock:^(void){
+                                                         [splashScreen removeFromSuperview];
+                                                     }];
 }
 
 @end

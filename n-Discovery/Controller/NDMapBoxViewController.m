@@ -88,7 +88,7 @@
 {
     dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(backgroundQueue, ^{
-        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"facilities" ofType:@"geojson"];
+        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"restrooms" ofType:@"geojson"];
         NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:[[NSData alloc] initWithContentsOfFile:jsonPath] options:0 error:nil];
         for (NSDictionary *feature in jsonDict[@"features"]) {
             MGLPointAnnotation *marker = [[MGLPointAnnotation alloc] init];
