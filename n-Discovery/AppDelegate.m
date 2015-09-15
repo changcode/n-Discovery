@@ -12,8 +12,10 @@
 #import "KCLaunchImageViewController.h"
 #import "UIImage+ForiPhone.h"
 
-@interface AppDelegate ()
-
+@interface AppDelegate () <CLLocationManagerDelegate>
+{
+    CLLocationManager *locationManager;
+}
 @end
 
 @implementation AppDelegate
@@ -21,7 +23,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MGLAccountManager setAccessToken:@"pk.eyJ1IjoiY2hhbmdzaHUxOTkxIiwiYSI6InlQbmlERXMifQ.c12pyT4RSGAc6N0eloV3Eg"];
-    [self handleLaunchImage];
+//    [self handleLaunchImage];
+    [self handleLocationManger];
     return YES;
 }
 
@@ -48,8 +51,7 @@
 }
 
 #pragma-mark ThirdpartMethods
-- (void)handleLaunchImage
-{
+- (void)handleLaunchImage {
     UIImageView *splashScreen = [[UIImageView alloc] initWithImage:[UIImage autoSelectImageWithImageName:@"FakeLaunchImage"]];
     [self.window addSubview:splashScreen];
     
@@ -62,6 +64,33 @@
                                                      taskBlock:^(void){
                                                          [splashScreen removeFromSuperview];
                                                      }];
+}
+
+- (void)handleLocationManger {
+    locationManager = [CLLocationManager new];
+    locationManager.delegate = self;
+    [locationManager requestAlwaysAuthorization];
+}
+
+- (void)handleEnterRegionEvent:(CLRegion *)region {
+#warning needs implements
+}
+
+- (void)handleExitRegionEvent:(CLRegion *)region {
+#warning needs implements
+}
+
+#pragma-mark RegionMethods
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+    if ([region isKindOfClass:[CLCircularRegion class]]) {
+        [self handleEnterRegionEvent:region];
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+    if ([region isKindOfClass:[CLCircularRegion class]]) {
+        [self handleExitRegionEvent:region];
+    }
 }
 
 @end

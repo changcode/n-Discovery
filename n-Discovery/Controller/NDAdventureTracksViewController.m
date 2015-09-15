@@ -8,8 +8,10 @@
 
 #import "NDAdventureTracksViewController.h"
 #import "JBParallaxCell.h"
+#import "SLParallaxController.h"
 
 @interface NDAdventureTracksViewController ()<UIScrollViewDelegate>
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 @property (nonatomic, strong) NSArray *tableItems;
 @property (nonatomic, strong) NSArray *titleItems;
 @property (nonatomic, strong) NSArray *subtitleItems;
@@ -19,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [_menuButton setAction:@selector(presentLeftMenuViewController:)];
     // Load the items in the table
     self.tableItems = @[[UIImage imageNamed:@"demo_1.jpg"],
                         [UIImage imageNamed:@"demo_2.jpg"],
@@ -78,7 +81,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"test");
+    [self.navigationController pushViewController:[SLParallaxController new] animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

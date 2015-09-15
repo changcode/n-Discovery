@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8yF-99-V5h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lXo-pN-AXO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Test View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="testViewController" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="testViewController" id="vXZ-lx-hvc" customClass="NDTestViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,18 +15,24 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpE-vG-we7">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="test:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="49e-x2-erl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HXf-Hn-oSD">
-                        <barButtonItem key="leftBarButtonItem" image="demo_1.jpg" id="X6X-wX-HbK"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="menubutton" destination="X6X-wX-HbK" id="zqa-vD-J7L"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="HXf-Hn-oSD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-252" y="-350"/>
+            <point key="canvasLocation" x="572" y="583"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="n2p-GK-ay8">
@@ -45,12 +51,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="teg-lw-E0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-427" y="817"/>
+            <point key="canvasLocation" x="478" y="1315"/>
         </scene>
-        <!--Learn AsU Go Table View Controller-->
+        <!--LearnAsYouGo-->
         <scene sceneID="aON-bN-u5l">
             <objects>
-                <tableViewController id="dF6-mF-KOU" customClass="NDLearnAsUGoTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NDLearnAsYouGoViewController" id="dF6-mF-KOU" customClass="NDLearnAsUGoTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3EY-LQ-70U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,10 +74,20 @@
                             <outlet property="delegate" destination="dF6-mF-KOU" id="vAj-ER-1sG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="73q-Jo-WHe">
+                    <navigationItem key="navigationItem" title="LearnAsYouGo" id="73q-Jo-WHe">
                         <barButtonItem key="leftBarButtonItem" image="MenuButton" id="6Mc-hh-fgI"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="yIO-b3-eAH">
+                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="qQd-52-LXk">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="featureTurnOn:" destination="dF6-mF-KOU" eventType="valueChanged" id="8wK-JM-eFJ"/>
+                                </connections>
+                            </switch>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="featureOnOff" destination="qQd-52-LXk" id="nRy-hU-SIH"/>
                         <outlet property="menuBarButtonItem" destination="6Mc-hh-fgI" id="48v-k3-Eg9"/>
                         <segue destination="5qM-Rk-aSX" kind="show" identifier="go" id="Jn7-mP-8IZ"/>
                     </connections>
@@ -111,7 +127,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Citizen Science" id="b7C-gF-HBH"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Citizen Science" id="b7C-gF-HBH">
+                        <barButtonItem key="leftBarButtonItem" image="MenuButton" id="F1w-Ob-yly"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="menuButton" destination="F1w-Ob-yly" id="2Hs-y5-RBl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLh-6v-rdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oiu-XY-I1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855" y="1432"/>
+            <point key="canvasLocation" x="478" y="1948"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zhw-Bn-9j9">
@@ -222,12 +245,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTP-IW-NQw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-699" y="-350"/>
+            <point key="canvasLocation" x="125" y="583"/>
         </scene>
         <!--Map-->
         <scene sceneID="EgU-Vz-Xc0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WIJ-of-PDi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NDMapBoxNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="WIJ-of-PDi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="TabBarMap" id="pWg-aM-WGh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="suX-TL-G5P">
@@ -313,17 +336,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="What I Just See" id="iSY-38-hpI"/>
+                    <navigationItem key="navigationItem" title="What I Just See" id="iSY-38-hpI">
+                        <barButtonItem key="leftBarButtonItem" image="MenuButton" id="A3E-vT-ZyW"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="A3E-vT-ZyW" id="N1a-qG-AbC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pR-V4-gjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1491" y="2586"/>
         </scene>
-        <!--WhatIJustSee-->
+        <!--Identify-->
         <scene sceneID="xSt-ui-gkr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jze-fA-pvg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="WhatIJustSee" image="TabBarWIJS" id="5gp-eX-mXh"/>
+                    <tabBarItem key="tabBarItem" title="Identify" image="TabBarWIJS" id="5gp-eX-mXh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dkh-Gx-RoR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -401,9 +429,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Adventure Tracks" id="TBT-Ja-tIh"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Adventure Tracks" id="LJl-c9-K9z">
+                        <barButtonItem key="leftBarButtonItem" image="MenuButton" id="XUv-qH-bJw"/>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="menuButton" destination="XUv-qH-bJw" id="Jqg-Be-t1l"/>
                         <outlet property="tableView" destination="ZmB-yS-qhh" id="zl6-8b-5oR"/>
                     </connections>
                 </viewController>
@@ -420,7 +453,6 @@
         <image name="TabBarMap" width="25" height="25"/>
         <image name="TabBarWIJS" width="26" height="26"/>
         <image name="demo_1" width="640" height="360"/>
-        <image name="demo_1.jpg" width="640" height="360"/>
     </resources>
     <color key="tintColor" red="1" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

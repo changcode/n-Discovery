@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "Mapbox.h"
-#import "RMUserTrackingBarButtonItem.h"
 #import "RESideMenu.h"
 
 @interface ViewController () <MGLMapViewDelegate>

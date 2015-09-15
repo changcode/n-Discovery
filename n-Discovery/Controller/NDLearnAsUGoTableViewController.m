@@ -15,10 +15,22 @@
 
 @property (strong, readwrite, nonatomic) RETableViewManager *manager;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItem;
+@property (weak, nonatomic) IBOutlet UISwitch *featureOnOff;
 
 @end
 
 @implementation NDLearnAsUGoTableViewController
+- (IBAction)featureTurnOn:(id)sender {
+    NSLog(@"!!");
+//    [self.navigationItem setPrompt:@"Starting finding nearby you!"];
+    if ([self.featureOnOff isOn]) {
+        NSLog(@"%lu",(unsigned long)self.featureOnOff.state);
+        [self.navigationItem setPrompt:@"Starting finding nearby you!"];
+    }
+    else{
+        [self.navigationItem setPrompt:nil];
+    }
+}
 
 - (void)viewDidLoad
 {

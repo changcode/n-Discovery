@@ -9,6 +9,7 @@
 #import "NDTestViewController.h"
 #import "CoreLocation/CoreLocation.h"
 #import "AFNetworking.h"
+#import "SLParallaxController.h"
 
 @interface NDTestViewController () <CLLocationManagerDelegate>
 
@@ -23,11 +24,11 @@
     locationManager = [[CLLocationManager alloc] init];
 }
 
+
+
+
 - (IBAction)test:(id)sender {
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    [locationManager startUpdatingLocation];
+    [self.navigationController pushViewController:[SLParallaxController new] animated:YES];
 }
 #pragma mark - CLLocationManagerDelegate
 

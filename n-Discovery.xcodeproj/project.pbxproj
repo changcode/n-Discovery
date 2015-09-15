@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7D78591C34CC645CCA28ABB9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1C20950DF3557B5E96225A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A013899A1BA899980004E356 /* JBParallaxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A01389971BA899980004E356 /* JBParallaxCell.m */; };
+		A013899B1BA899980004E356 /* SLParallaxController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01389991BA899980004E356 /* SLParallaxController.m */; };
+		A01389A11BA89B060004E356 /* CVNPpos.GPX in Resources */ = {isa = PBXBuildFile; fileRef = A013899C1BA89B060004E356 /* CVNPpos.GPX */; };
+		A01389A21BA89B060004E356 /* Directions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A013899D1BA89B060004E356 /* Directions.geojson */; };
+		A01389A31BA89B060004E356 /* facilities.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A013899E1BA89B060004E356 /* facilities.geojson */; };
+		A01389A41BA89B060004E356 /* restrooms.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A013899F1BA89B060004E356 /* restrooms.geojson */; };
+		A01389A51BA89B060004E356 /* trails8.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A01389A01BA89B060004E356 /* trails8.geojson */; };
 		A07031691B72485500F02AD9 /* NDLearnAsUGoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07031681B72485500F02AD9 /* NDLearnAsUGoTableViewController.m */; };
 		A070316E1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A070316D1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.m */; };
 		A07031751B724C1500F02AD9 /* ListImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A07031741B724C1500F02AD9 /* ListImageCell.m */; };
@@ -19,16 +26,11 @@
 		A08D1B201B6AF22F00250E14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08D1B1E1B6AF22F00250E14 /* LaunchScreen.xib */; };
 		A08D1B2C1B6AF22F00250E14 /* n_DiscoveryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A08D1B2B1B6AF22F00250E14 /* n_DiscoveryTests.m */; };
 		A09447231B6AF839009268C6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A09447221B6AF839009268C6 /* Settings.bundle */; };
-		A09447251B6AFD61009268C6 /* CVNPpos.GPX in Resources */ = {isa = PBXBuildFile; fileRef = A09447241B6AFD61009268C6 /* CVNPpos.GPX */; };
-		A094472D1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A094472C1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m */; };
 		A09447341B71B312009268C6 /* NDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09447321B71B312009268C6 /* NDRootViewController.m */; };
 		A09447371B71B877009268C6 /* NDMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09447361B71B877009268C6 /* NDMainMenuViewController.m */; };
 		A094473D1B71C5DD009268C6 /* NDMapBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A094473C1B71C5DD009268C6 /* NDMapBoxViewController.m */; };
 		A095ACC41BA6029A007B445F /* NDCitiScienceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A095ACC31BA6029A007B445F /* NDCitiScienceViewController.m */; };
 		A095ACC71BA616B3007B445F /* NDWhatIJustSeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A095ACC61BA616B3007B445F /* NDWhatIJustSeeViewController.m */; };
-		A095ACC91BA67397007B445F /* restrooms.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A095ACC81BA67397007B445F /* restrooms.geojson */; };
-		A0A9ADD41B7A62DE00B1E15B /* trails8.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD31B7A62DE00B1E15B /* trails8.geojson */; };
-		A0A9ADD61B7A758800B1E15B /* facilities.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD51B7A758800B1E15B /* facilities.geojson */; };
 		A0A9ADE31B7A803600B1E15B /* userpic6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD71B7A803600B1E15B /* userpic6.jpg */; };
 		A0A9ADE41B7A803600B1E15B /* userpic5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD81B7A803600B1E15B /* userpic5.jpg */; };
 		A0A9ADE51B7A803600B1E15B /* userpic4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADD91B7A803600B1E15B /* userpic4.jpg */; };
@@ -42,10 +44,9 @@
 		A0A9ADED1B7A803600B1E15B /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADE11B7A803600B1E15B /* photo2.jpg */; };
 		A0A9ADEE1B7A803600B1E15B /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADE21B7A803600B1E15B /* photo1.jpg */; };
 		A0A9ADF11B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A9ADEF1B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m */; };
-		A0A9ADF31B7A9B0C00B1E15B /* Directions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A0A9ADF21B7A947E00B1E15B /* Directions.geojson */; };
 		A0D9AEF41B97748600C6B872 /* NDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D9AEF31B97748600C6B872 /* NDTestViewController.m */; };
-		A0DFFDC51BA6AD4B001DA7D4 /* JBParallaxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DFFDC41BA6AD4B001DA7D4 /* JBParallaxCell.m */; };
 		A0DFFDC81BA6ADD7001DA7D4 /* NDAdventureTracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DFFDC71BA6ADD7001DA7D4 /* NDAdventureTracksViewController.m */; };
+		A0DFFDCC1BA6D172001DA7D4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DFFDCB1BA6D172001DA7D4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,15 @@
 
 /* Begin PBXFileReference section */
 		3722C1D2D8998550890ADF8E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A01389961BA899980004E356 /* JBParallaxCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBParallaxCell.h; path = Vendor/JBParallaxCell.h; sourceTree = "<group>"; };
+		A01389971BA899980004E356 /* JBParallaxCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBParallaxCell.m; path = Vendor/JBParallaxCell.m; sourceTree = "<group>"; };
+		A01389981BA899980004E356 /* SLParallaxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLParallaxController.h; path = Vendor/SLParallaxController.h; sourceTree = "<group>"; };
+		A01389991BA899980004E356 /* SLParallaxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLParallaxController.m; path = Vendor/SLParallaxController.m; sourceTree = "<group>"; };
+		A013899C1BA89B060004E356 /* CVNPpos.GPX */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CVNPpos.GPX; path = ResourcesFiles/CVNPpos.GPX; sourceTree = "<group>"; };
+		A013899D1BA89B060004E356 /* Directions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Directions.geojson; path = ResourcesFiles/Directions.geojson; sourceTree = "<group>"; };
+		A013899E1BA89B060004E356 /* facilities.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = facilities.geojson; path = ResourcesFiles/facilities.geojson; sourceTree = "<group>"; };
+		A013899F1BA89B060004E356 /* restrooms.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = restrooms.geojson; path = ResourcesFiles/restrooms.geojson; sourceTree = "<group>"; };
+		A01389A01BA89B060004E356 /* trails8.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = trails8.geojson; path = ResourcesFiles/trails8.geojson; sourceTree = "<group>"; };
 		A07031671B72485500F02AD9 /* NDLearnAsUGoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDLearnAsUGoTableViewController.h; path = Controller/NDLearnAsUGoTableViewController.h; sourceTree = "<group>"; };
 		A07031681B72485500F02AD9 /* NDLearnAsUGoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDLearnAsUGoTableViewController.m; path = Controller/NDLearnAsUGoTableViewController.m; sourceTree = "<group>"; };
 		A070316C1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDLearnAsUGoHeaderView.h; path = LearnAsUGo/View/NDLearnAsUGoHeaderView.h; sourceTree = "<group>"; };
@@ -80,9 +90,6 @@
 		A08D1B2A1B6AF22F00250E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A08D1B2B1B6AF22F00250E14 /* n_DiscoveryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = n_DiscoveryTests.m; sourceTree = "<group>"; };
 		A09447221B6AF839009268C6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		A09447241B6AFD61009268C6 /* CVNPpos.GPX */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CVNPpos.GPX; sourceTree = "<group>"; };
-		A094472B1B7187A7009268C6 /* RMUserTrackingBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMUserTrackingBarButtonItem.h; sourceTree = "<group>"; };
-		A094472C1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMUserTrackingBarButtonItem.m; sourceTree = "<group>"; };
 		A09447321B71B312009268C6 /* NDRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDRootViewController.m; path = Controller/NDRootViewController.m; sourceTree = "<group>"; };
 		A09447331B71B312009268C6 /* NDRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDRootViewController.h; path = Controller/NDRootViewController.h; sourceTree = "<group>"; };
 		A09447351B71B877009268C6 /* NDMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDMainMenuViewController.h; path = Controller/NDMainMenuViewController.h; sourceTree = "<group>"; };
@@ -93,9 +100,6 @@
 		A095ACC31BA6029A007B445F /* NDCitiScienceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDCitiScienceViewController.m; path = Controller/NDCitiScienceViewController.m; sourceTree = "<group>"; };
 		A095ACC51BA616B3007B445F /* NDWhatIJustSeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDWhatIJustSeeViewController.h; path = Controller/NDWhatIJustSeeViewController.h; sourceTree = "<group>"; };
 		A095ACC61BA616B3007B445F /* NDWhatIJustSeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDWhatIJustSeeViewController.m; path = Controller/NDWhatIJustSeeViewController.m; sourceTree = "<group>"; };
-		A095ACC81BA67397007B445F /* restrooms.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = restrooms.geojson; sourceTree = "<group>"; };
-		A0A9ADD31B7A62DE00B1E15B /* trails8.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trails8.geojson; sourceTree = "<group>"; };
-		A0A9ADD51B7A758800B1E15B /* facilities.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = facilities.geojson; sourceTree = "<group>"; };
 		A0A9ADD71B7A803600B1E15B /* userpic6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = userpic6.jpg; path = LearnAsUGo/Resources/userpic6.jpg; sourceTree = "<group>"; };
 		A0A9ADD81B7A803600B1E15B /* userpic5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = userpic5.jpg; path = LearnAsUGo/Resources/userpic5.jpg; sourceTree = "<group>"; };
 		A0A9ADD91B7A803600B1E15B /* userpic4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = userpic4.jpg; path = LearnAsUGo/Resources/userpic4.jpg; sourceTree = "<group>"; };
@@ -110,13 +114,12 @@
 		A0A9ADE21B7A803600B1E15B /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo1.jpg; path = LearnAsUGo/Resources/photo1.jpg; sourceTree = "<group>"; };
 		A0A9ADEF1B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDLearnAsUGoListImageItem.m; path = LearnAsUGo/Model/NDLearnAsUGoListImageItem.m; sourceTree = "<group>"; };
 		A0A9ADF01B7A804C00B1E15B /* NDLearnAsUGoListImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDLearnAsUGoListImageItem.h; path = LearnAsUGo/Model/NDLearnAsUGoListImageItem.h; sourceTree = "<group>"; };
-		A0A9ADF21B7A947E00B1E15B /* Directions.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Directions.geojson; sourceTree = "<group>"; };
 		A0D9AEF21B97748600C6B872 /* NDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDTestViewController.h; sourceTree = "<group>"; };
 		A0D9AEF31B97748600C6B872 /* NDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDTestViewController.m; sourceTree = "<group>"; };
-		A0DFFDC31BA6AD4B001DA7D4 /* JBParallaxCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBParallaxCell.h; sourceTree = "<group>"; };
-		A0DFFDC41BA6AD4B001DA7D4 /* JBParallaxCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBParallaxCell.m; sourceTree = "<group>"; };
 		A0DFFDC61BA6ADD7001DA7D4 /* NDAdventureTracksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDAdventureTracksViewController.h; path = Controller/NDAdventureTracksViewController.h; sourceTree = "<group>"; };
 		A0DFFDC71BA6ADD7001DA7D4 /* NDAdventureTracksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDAdventureTracksViewController.m; path = Controller/NDAdventureTracksViewController.m; sourceTree = "<group>"; };
+		A0DFFDCA1BA6CEC7001DA7D4 /* n-Discovery-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "n-Discovery-Prefix.pch"; sourceTree = "<group>"; };
+		A0DFFDCB1BA6D172001DA7D4 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
 		BB1C20950DF3557B5E96225A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E403A3994282993AF7E8CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DFFDCC1BA6D172001DA7D4 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,17 +228,14 @@
 				A0DFFDC91BA6C068001DA7D4 /* Utils */,
 				A070316A1B72498A00F02AD9 /* LearnAsUGo */,
 				A09447311B71B2E3009268C6 /* Controller */,
+				A0DFFDD41BA6ED27001DA7D4 /* Vendor */,
 				A08D1B131B6AF22F00250E14 /* AppDelegate.h */,
 				A08D1B141B6AF22F00250E14 /* AppDelegate.m */,
 				A08D1B161B6AF22F00250E14 /* ViewController.h */,
 				A08D1B171B6AF22F00250E14 /* ViewController.m */,
 				A08D1B191B6AF22F00250E14 /* Main.storyboard */,
 				A08D1B1E1B6AF22F00250E14 /* LaunchScreen.xib */,
-				A0DFFDC31BA6AD4B001DA7D4 /* JBParallaxCell.h */,
-				A0DFFDC41BA6AD4B001DA7D4 /* JBParallaxCell.m */,
 				A095ACC11BA60024007B445F /* GISFile */,
-				A094472B1B7187A7009268C6 /* RMUserTrackingBarButtonItem.h */,
-				A094472C1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m */,
 				A08D1B1C1B6AF22F00250E14 /* Images.xcassets */,
 				A08D1B0F1B6AF22F00250E14 /* Supporting Files */,
 			);
@@ -247,6 +248,7 @@
 				A09447221B6AF839009268C6 /* Settings.bundle */,
 				A08D1B101B6AF22F00250E14 /* Info.plist */,
 				A08D1B111B6AF22F00250E14 /* main.m */,
+				A0DFFDCA1BA6CEC7001DA7D4 /* n-Discovery-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -279,14 +281,14 @@
 				A094473C1B71C5DD009268C6 /* NDMapBoxViewController.m */,
 				A07031671B72485500F02AD9 /* NDLearnAsUGoTableViewController.h */,
 				A07031681B72485500F02AD9 /* NDLearnAsUGoTableViewController.m */,
-				A0D9AEF21B97748600C6B872 /* NDTestViewController.h */,
-				A0D9AEF31B97748600C6B872 /* NDTestViewController.m */,
 				A095ACC21BA6029A007B445F /* NDCitiScienceViewController.h */,
 				A095ACC31BA6029A007B445F /* NDCitiScienceViewController.m */,
-				A095ACC51BA616B3007B445F /* NDWhatIJustSeeViewController.h */,
-				A095ACC61BA616B3007B445F /* NDWhatIJustSeeViewController.m */,
 				A0DFFDC61BA6ADD7001DA7D4 /* NDAdventureTracksViewController.h */,
 				A0DFFDC71BA6ADD7001DA7D4 /* NDAdventureTracksViewController.m */,
+				A095ACC51BA616B3007B445F /* NDWhatIJustSeeViewController.h */,
+				A095ACC61BA616B3007B445F /* NDWhatIJustSeeViewController.m */,
+				A0D9AEF21B97748600C6B872 /* NDTestViewController.h */,
+				A0D9AEF31B97748600C6B872 /* NDTestViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -294,11 +296,11 @@
 		A095ACC11BA60024007B445F /* GISFile */ = {
 			isa = PBXGroup;
 			children = (
-				A095ACC81BA67397007B445F /* restrooms.geojson */,
-				A09447241B6AFD61009268C6 /* CVNPpos.GPX */,
-				A0A9ADF21B7A947E00B1E15B /* Directions.geojson */,
-				A0A9ADD31B7A62DE00B1E15B /* trails8.geojson */,
-				A0A9ADD51B7A758800B1E15B /* facilities.geojson */,
+				A013899C1BA89B060004E356 /* CVNPpos.GPX */,
+				A013899D1BA89B060004E356 /* Directions.geojson */,
+				A013899E1BA89B060004E356 /* facilities.geojson */,
+				A013899F1BA89B060004E356 /* restrooms.geojson */,
+				A01389A01BA89B060004E356 /* trails8.geojson */,
 			);
 			name = GISFile;
 			sourceTree = "<group>";
@@ -310,9 +312,21 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		A0DFFDD41BA6ED27001DA7D4 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				A01389961BA899980004E356 /* JBParallaxCell.h */,
+				A01389971BA899980004E356 /* JBParallaxCell.m */,
+				A01389981BA899980004E356 /* SLParallaxController.h */,
+				A01389991BA899980004E356 /* SLParallaxController.m */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
 		A3A208CD240441F3A114A87F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0DFFDCB1BA6D172001DA7D4 /* Pods.framework */,
 				BB1C20950DF3557B5E96225A /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -406,9 +420,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A9ADF31B7A9B0C00B1E15B /* Directions.geojson in Resources */,
-				A095ACC91BA67397007B445F /* restrooms.geojson in Resources */,
-				A0A9ADD61B7A758800B1E15B /* facilities.geojson in Resources */,
+				A01389A51BA89B060004E356 /* trails8.geojson in Resources */,
+				A01389A31BA89B060004E356 /* facilities.geojson in Resources */,
 				A09447231B6AF839009268C6 /* Settings.bundle in Resources */,
 				A0A9ADE81B7A803600B1E15B /* userpic1.jpg in Resources */,
 				A08D1B1B1B6AF22F00250E14 /* Main.storyboard in Resources */,
@@ -419,14 +432,15 @@
 				A0A9ADEB1B7A803600B1E15B /* photo4.jpg in Resources */,
 				A0A9ADE51B7A803600B1E15B /* userpic4.jpg in Resources */,
 				A0A9ADE31B7A803600B1E15B /* userpic6.jpg in Resources */,
+				A01389A11BA89B060004E356 /* CVNPpos.GPX in Resources */,
 				A0A9ADEC1B7A803600B1E15B /* photo3.jpg in Resources */,
 				A08D1B1D1B6AF22F00250E14 /* Images.xcassets in Resources */,
 				A0A9ADEA1B7A803600B1E15B /* photo5.jpg in Resources */,
 				A0A9ADEE1B7A803600B1E15B /* photo1.jpg in Resources */,
-				A09447251B6AFD61009268C6 /* CVNPpos.GPX in Resources */,
 				A0A9ADE41B7A803600B1E15B /* userpic5.jpg in Resources */,
 				A0A9ADE61B7A803600B1E15B /* userpic3.jpg in Resources */,
-				A0A9ADD41B7A62DE00B1E15B /* trails8.geojson in Resources */,
+				A01389A41BA89B060004E356 /* restrooms.geojson in Resources */,
+				A01389A21BA89B060004E356 /* Directions.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,10 +515,10 @@
 				A09447341B71B312009268C6 /* NDRootViewController.m in Sources */,
 				A095ACC41BA6029A007B445F /* NDCitiScienceViewController.m in Sources */,
 				A095ACC71BA616B3007B445F /* NDWhatIJustSeeViewController.m in Sources */,
+				A013899B1BA899980004E356 /* SLParallaxController.m in Sources */,
 				A0DFFDC81BA6ADD7001DA7D4 /* NDAdventureTracksViewController.m in Sources */,
-				A094472D1B7187A7009268C6 /* RMUserTrackingBarButtonItem.m in Sources */,
+				A013899A1BA899980004E356 /* JBParallaxCell.m in Sources */,
 				A08D1B151B6AF22F00250E14 /* AppDelegate.m in Sources */,
-				A0DFFDC51BA6AD4B001DA7D4 /* JBParallaxCell.m in Sources */,
 				A09447371B71B877009268C6 /* NDMainMenuViewController.m in Sources */,
 				A0D9AEF41B97748600C6B872 /* NDTestViewController.m in Sources */,
 				A08D1B121B6AF22F00250E14 /* main.m in Sources */,
@@ -574,6 +588,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "n-Discovery/n-Discovery-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -616,6 +632,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "n-Discovery/n-Discovery-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -660,6 +678,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -679,6 +698,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = "n-DiscoveryTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

@@ -21,6 +21,7 @@
     
     CGFloat _panStartValue;
     BOOL _panVertical;
+    IBOutlet UIBarButtonItem *menuButton;
 }
 @end
 
@@ -29,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [menuButton setAction:@selector(presentLeftMenuViewController:)];
     self.view.backgroundColor = [UIColor blackColor];
     
     _wallpaperView = [[UIImageView alloc] initWithFrame:self.view.bounds];

@@ -8,6 +8,8 @@
 
 #import "NDMainMenuViewController.h"
 #import "NDMapBoxViewController.h"
+#import "NDLearnAsUGoTableViewController.h"
+#import "NDTestViewController.h"
 #import "UIViewController+RESideMenu.h"
 
 @interface NDMainMenuViewController ()
@@ -44,12 +46,11 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.row) {
         case 0:
-            [self.sideMenuViewController setContentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"NDMainViewTablBarController"]
-                                                         animated:YES];
+            [self.sideMenuViewController setContentViewController:[[self.storyboard instantiateViewControllerWithIdentifier:@"NDMainViewTablBarController"] selectedViewController] animated:YES];
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 1:
-            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"secondViewController"]]
+            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@""]]
                                                          animated:YES];
             [self.sideMenuViewController hideMenuViewController];
             break;

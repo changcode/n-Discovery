@@ -10,6 +10,9 @@
 #import "FBShimmeringView.h"
 
 @interface NDWhatIJustSeeViewController ()
+{
+    IBOutlet UIBarButtonItem *menuButton;
+}
 
 @end
 
@@ -26,8 +29,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
+    [menuButton setAction:@selector(presentLeftMenuViewController:)];
     
+    self.view.backgroundColor = [UIColor blackColor];
+
     _wallpaperView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     _wallpaperView.image = [UIImage imageNamed:@"forthcoming"];
     _wallpaperView.contentMode = UIViewContentModeScaleAspectFill;
