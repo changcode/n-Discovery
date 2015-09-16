@@ -47,6 +47,9 @@
 		A0D9AEF41B97748600C6B872 /* NDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D9AEF31B97748600C6B872 /* NDTestViewController.m */; };
 		A0DFFDC81BA6ADD7001DA7D4 /* NDAdventureTracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DFFDC71BA6ADD7001DA7D4 /* NDAdventureTracksViewController.m */; };
 		A0DFFDCC1BA6D172001DA7D4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DFFDCB1BA6D172001DA7D4 /* Pods.framework */; };
+		A0F1EF511BA911EA00377FBF /* MultilineTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F1EF501BA911EA00377FBF /* MultilineTextCell.m */; };
+		A0F1EF541BA9123100377FBF /* MultilineTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F1EF531BA9123100377FBF /* MultilineTextItem.m */; };
+		A0F1EF571BA91F1E00377FBF /* NDQuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F1EF561BA91F1E00377FBF /* NDQuestionTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +123,12 @@
 		A0DFFDC71BA6ADD7001DA7D4 /* NDAdventureTracksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDAdventureTracksViewController.m; path = Controller/NDAdventureTracksViewController.m; sourceTree = "<group>"; };
 		A0DFFDCA1BA6CEC7001DA7D4 /* n-Discovery-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "n-Discovery-Prefix.pch"; sourceTree = "<group>"; };
 		A0DFFDCB1BA6D172001DA7D4 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
+		A0F1EF4F1BA911EA00377FBF /* MultilineTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultilineTextCell.h; path = QuestionSystem/MultilineTextCell.h; sourceTree = "<group>"; };
+		A0F1EF501BA911EA00377FBF /* MultilineTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultilineTextCell.m; path = QuestionSystem/MultilineTextCell.m; sourceTree = "<group>"; };
+		A0F1EF521BA9123100377FBF /* MultilineTextItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultilineTextItem.h; path = QuestionSystem/MultilineTextItem.h; sourceTree = "<group>"; };
+		A0F1EF531BA9123100377FBF /* MultilineTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultilineTextItem.m; path = QuestionSystem/MultilineTextItem.m; sourceTree = "<group>"; };
+		A0F1EF551BA91F1E00377FBF /* NDQuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDQuestionTableViewController.h; path = Controller/NDQuestionTableViewController.h; sourceTree = "<group>"; };
+		A0F1EF561BA91F1E00377FBF /* NDQuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDQuestionTableViewController.m; path = Controller/NDQuestionTableViewController.m; sourceTree = "<group>"; };
 		BB1C20950DF3557B5E96225A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E403A3994282993AF7E8CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,10 +234,12 @@
 		A08D1B0E1B6AF22F00250E14 /* n-Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				A0F1EF591BA9218300377FBF /* Vendor */,
+				A0F1EF4B1BA9118D00377FBF /* QuestionSystem */,
 				A0DFFDC91BA6C068001DA7D4 /* Utils */,
 				A070316A1B72498A00F02AD9 /* LearnAsUGo */,
+				A0F1EF581BA9215A00377FBF /* AdventureTracks */,
 				A09447311B71B2E3009268C6 /* Controller */,
-				A0DFFDD41BA6ED27001DA7D4 /* Vendor */,
 				A08D1B131B6AF22F00250E14 /* AppDelegate.h */,
 				A08D1B141B6AF22F00250E14 /* AppDelegate.m */,
 				A08D1B161B6AF22F00250E14 /* ViewController.h */,
@@ -312,7 +323,51 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		A0DFFDD41BA6ED27001DA7D4 /* Vendor */ = {
+		A0F1EF4B1BA9118D00377FBF /* QuestionSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A0F1EF4E1BA911AA00377FBF /* Controller */,
+				A0F1EF4D1BA911A400377FBF /* Model */,
+				A0F1EF4C1BA9119F00377FBF /* Views */,
+			);
+			name = QuestionSystem;
+			sourceTree = "<group>";
+		};
+		A0F1EF4C1BA9119F00377FBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0F1EF4F1BA911EA00377FBF /* MultilineTextCell.h */,
+				A0F1EF501BA911EA00377FBF /* MultilineTextCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A0F1EF4D1BA911A400377FBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0F1EF521BA9123100377FBF /* MultilineTextItem.h */,
+				A0F1EF531BA9123100377FBF /* MultilineTextItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A0F1EF4E1BA911AA00377FBF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A0F1EF551BA91F1E00377FBF /* NDQuestionTableViewController.h */,
+				A0F1EF561BA91F1E00377FBF /* NDQuestionTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A0F1EF581BA9215A00377FBF /* AdventureTracks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AdventureTracks;
+			sourceTree = "<group>";
+		};
+		A0F1EF591BA9218300377FBF /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
 				A01389961BA899980004E356 /* JBParallaxCell.h */,
@@ -513,10 +568,13 @@
 				A0A9ADF11B7A804C00B1E15B /* NDLearnAsUGoListImageItem.m in Sources */,
 				A07031751B724C1500F02AD9 /* ListImageCell.m in Sources */,
 				A09447341B71B312009268C6 /* NDRootViewController.m in Sources */,
+				A0F1EF541BA9123100377FBF /* MultilineTextItem.m in Sources */,
+				A0F1EF571BA91F1E00377FBF /* NDQuestionTableViewController.m in Sources */,
 				A095ACC41BA6029A007B445F /* NDCitiScienceViewController.m in Sources */,
 				A095ACC71BA616B3007B445F /* NDWhatIJustSeeViewController.m in Sources */,
 				A013899B1BA899980004E356 /* SLParallaxController.m in Sources */,
 				A0DFFDC81BA6ADD7001DA7D4 /* NDAdventureTracksViewController.m in Sources */,
+				A0F1EF511BA911EA00377FBF /* MultilineTextCell.m in Sources */,
 				A013899A1BA899980004E356 /* JBParallaxCell.m in Sources */,
 				A08D1B151B6AF22F00250E14 /* AppDelegate.m in Sources */,
 				A09447371B71B877009268C6 /* NDMainMenuViewController.m in Sources */,

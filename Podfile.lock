@@ -21,7 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - KCLaunchImage (0.0.4)
-  - Mapbox-iOS-SDK (2.0.0)
+  - Mapbox-iOS-SDK (2.1.2)
   - REFormattedNumberField (1.1.5)
   - RESideMenu (4.0.7)
   - RETableViewManager (1.6):
@@ -41,7 +41,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   KCLaunchImage: d33925210bad5de65ba332c67a9e03533e0028df
-  Mapbox-iOS-SDK: 07b84769693242f0e20eeed03d38515beca93c5b
+  Mapbox-iOS-SDK: f8a8fd3ccf918196d27a52ab1694414be20f2210
   REFormattedNumberField: be3d55dd709f65541fb26b7e1709da07903147f8
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   RETableViewManager: 9667ecb29c005c32df40a1dd1828224840a351a2

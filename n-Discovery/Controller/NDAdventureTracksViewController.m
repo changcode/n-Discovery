@@ -81,7 +81,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.navigationController pushViewController:[SLParallaxController new] animated:YES];
+    if (indexPath.row == 0 || indexPath.row == 1) {
+//        [self.navigationController pushViewController:[SLParallaxController new] animated:YES];
+        [self performSegueWithIdentifier:@"test" sender:nil];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"ForthComing!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK!", nil];
+        [alert show];
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
