@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     locationManager = [[CLLocationManager alloc] init];
+
 }
 
 

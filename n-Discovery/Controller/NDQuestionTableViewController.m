@@ -19,7 +19,9 @@
 @property (strong, readwrite, nonatomic) MultilineTextItem *questionItem;
 @property (strong, readwrite, nonatomic) RERadioItem *singleAnswerOptions;
 @property (strong, readwrite, nonatomic) REMultipleChoiceItem *multiAnswerOptions;
+@property (strong, readwrite, nonatomic) RETextItem *openAnswerOptions;
 
+@property (assign, readwrite, nonatomic) NSUInteger *atIndexOfQuestion;
 
 @end
 
@@ -27,10 +29,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Question for you";
+    self.title = [NSString stringWithFormat:@"Number: %d", [_QuestionData count]];
     _manager = [[RETableViewManager alloc] initWithTableView:self.tableView delegate:self];
-    _quesitonSection = [self addQuestionSection];
-    _answerSection = [self addAnswerSection];
+    if ([_QuestionData count]) {
+        _quesitonSection = [self addQuestionSection];
+        _answerSection = [self addAnswerSection];
+    }
 }
 
 - (RETableViewSection *)addQuestionSection {
@@ -39,7 +43,7 @@
     
     RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:@"Question"];
     
-    [section addItem:[MultilineTextItem itemWithTitle:@"Custom item / cell example. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sem leo, malesuada tempor metus et, elementum pulvinar nibh.Custom item / cell example. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sem leo, malesuada tempor metus et, elementum pulvinar nibh.Custom item / cell example. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sem leo, malesuada tempor metus et, elementum pulvinar nibh.Custom item / cell example. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sem leo, malesuada tempor metus et, elementum pulvinar nibh."]];
+    [section addItem:[MultilineTextItem itemWithTitle: _QuestionData != nil ? _QuestionData[0][@"q_description"] : @"EMPTY" ]];
     
     [_manager addSection:section];
     return section;
@@ -50,16 +54,13 @@
     
     RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:@"Answer"];
     
-    if (true) {
-        _multiAnswerOptions = [REMultipleChoiceItem itemWithTitle:nil value:@[@"Option 2", @"Option 4"] selectionHandler:^(REMultipleChoiceItem *item) {
+    if ([_QuestionData[0][@"q_type"] isEqualToString:@"multi"]) {
+        _multiAnswerOptions = [REMultipleChoiceItem itemWithTitle:@"Options" value:@[@"Option 2", @"Option 4"] selectionHandler:^(REMultipleChoiceItem *item) {
             [item deselectRowAnimated:YES];
             
             // Generate sample options
             //
-            NSMutableArray *options = [[NSMutableArray alloc] init];
-            for (NSInteger i = 1; i < 40; i++)
-                [options addObject:[NSString stringWithFormat:@"Option %li", (long) i]];
-            
+            NSMutableArray *options = [NSMutableArray arrayWithArray:_QuestionData[0][@"q_options"]];
             // Present options controller
             //
             RETableViewOptionsController *optionsController = [[RETableViewOptionsController alloc] initWithItem:item options:options multipleChoice:YES completionHandler:^(RETableViewItem *selectedItem){
@@ -81,15 +82,14 @@
             [weakSelf.navigationController pushViewController:optionsController animated:YES];
         }];
         [section addItem:_multiAnswerOptions];
-    } else {
+    }
+    if ([_QuestionData[0][@"q_type"] isEqualToString:@"single"]) {
         _singleAnswerOptions = [RERadioItem itemWithTitle:@"Answer" value:nil
                                          selectionHandler:^(RERadioItem *item) {
                                              [item deselectRowAnimated:YES];
                                              // Generate sample options
                                              //
-                                             NSMutableArray *options = [[NSMutableArray alloc] init];
-                                             for (NSInteger i = 1; i < 40; i++)
-                                                 [options addObject:[NSString stringWithFormat:@"Option %li", (long) i]];
+                                             NSMutableArray *options = [NSMutableArray arrayWithArray:_QuestionData[0][@"q_options"]];
                                              
                                              // Present options controller
                                              //
@@ -114,6 +114,20 @@
                                          }];
         [section addItem:_singleAnswerOptions];
     }
+    if ([_QuestionData[0][@"q_type"] isEqualToString:@"open"]) {
+        
+        _openAnswerOptions = [RETextItem itemWithTitle:nil value:nil placeholder:@"Enter your think here"];
+        [section addItem:_openAnswerOptions];
+    }
+    
+    RETableViewItem *buttonItem = [RETableViewItem itemWithTitle:@"Submit" accessoryType:UITableViewCellAccessoryNone selectionHandler:^(RETableViewItem *item) {
+        item.title = @"OK!";
+        [item reloadRowWithAnimation:UITableViewRowAnimationAutomatic];
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    buttonItem.textAlignment = NSTextAlignmentCenter;
+    [section addItem:buttonItem];
+    
     [_manager addSection:section];
     return section;
 }

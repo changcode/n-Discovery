@@ -15,6 +15,8 @@
 @property (nonatomic, strong) NSArray *tableItems;
 @property (nonatomic, strong) NSArray *titleItems;
 @property (nonatomic, strong) NSArray *subtitleItems;
+
+@property (strong, nonatomic) NSArray *hardCode;
 @end
 
 @implementation NDAdventureTracksViewController
@@ -35,9 +37,10 @@
                         [UIImage imageNamed:@"demo_2.jpg"],
                         [UIImage imageNamed:@"demo_1.jpg"],
                         [UIImage imageNamed:@"demo_4.png"]];
+    self.hardCode = @[@"ledges_weathering_questions.json",@"discover_fallcolors.json",@"ledges_microhabitat.json"];
     
-    self.titleItems = @[@"Ledges", @"Fall Color", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming"];
-    self.subtitleItems = @[@"Ledges", @"Fall Color", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming" ];
+    self.titleItems = @[@"Ledges Weathering", @"Fall Color", @"Ledges Mircohabitat", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming"];
+    self.subtitleItems = @[@"Ledges Weathering", @"Fall Color", @"Ledges Mircohabitat", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming", @"Coming" ];
 }
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -81,13 +84,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0 || indexPath.row == 1) {
+    if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2) {
 //        [self.navigationController pushViewController:[SLParallaxController new] animated:YES];
-        [self performSegueWithIdentifier:@"test" sender:nil];
+        self.hidesBottomBarWhenPushed = YES;
+        [self performSegueWithIdentifier:@"test" sender:self.hardCode[indexPath.row]];
+        self.hidesBottomBarWhenPushed = NO;
     }
     else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"ForthComing!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK!", nil];
         [alert show];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"test"]) {
+        SLParallaxController *vc = segue.destinationViewController;
+        vc.jsonfile = (NSString *)sender;
     }
 }
 

@@ -50,6 +50,9 @@
 		A0F1EF511BA911EA00377FBF /* MultilineTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F1EF501BA911EA00377FBF /* MultilineTextCell.m */; };
 		A0F1EF541BA9123100377FBF /* MultilineTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F1EF531BA9123100377FBF /* MultilineTextItem.m */; };
 		A0F1EF571BA91F1E00377FBF /* NDQuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F1EF561BA91F1E00377FBF /* NDQuestionTableViewController.m */; };
+		A0F1EF5E1BA9268300377FBF /* discover_fallcolors.json in Resources */ = {isa = PBXBuildFile; fileRef = A0F1EF5B1BA9268300377FBF /* discover_fallcolors.json */; };
+		A0F1EF5F1BA9268300377FBF /* ledges_weathering_questions.json in Resources */ = {isa = PBXBuildFile; fileRef = A0F1EF5C1BA9268300377FBF /* ledges_weathering_questions.json */; };
+		A0F1EF601BA9268300377FBF /* ledges_microhabitat.json in Resources */ = {isa = PBXBuildFile; fileRef = A0F1EF5D1BA9268300377FBF /* ledges_microhabitat.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +132,9 @@
 		A0F1EF531BA9123100377FBF /* MultilineTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultilineTextItem.m; path = QuestionSystem/MultilineTextItem.m; sourceTree = "<group>"; };
 		A0F1EF551BA91F1E00377FBF /* NDQuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDQuestionTableViewController.h; path = Controller/NDQuestionTableViewController.h; sourceTree = "<group>"; };
 		A0F1EF561BA91F1E00377FBF /* NDQuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDQuestionTableViewController.m; path = Controller/NDQuestionTableViewController.m; sourceTree = "<group>"; };
+		A0F1EF5B1BA9268300377FBF /* discover_fallcolors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = discover_fallcolors.json; sourceTree = "<group>"; };
+		A0F1EF5C1BA9268300377FBF /* ledges_weathering_questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ledges_weathering_questions.json; sourceTree = "<group>"; };
+		A0F1EF5D1BA9268300377FBF /* ledges_microhabitat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ledges_microhabitat.json; sourceTree = "<group>"; };
 		BB1C20950DF3557B5E96225A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E403A3994282993AF7E8CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,6 +252,7 @@
 				A08D1B171B6AF22F00250E14 /* ViewController.m */,
 				A08D1B191B6AF22F00250E14 /* Main.storyboard */,
 				A08D1B1E1B6AF22F00250E14 /* LaunchScreen.xib */,
+				A0F1EF5A1BA9267600377FBF /* QuestionJSON */,
 				A095ACC11BA60024007B445F /* GISFile */,
 				A08D1B1C1B6AF22F00250E14 /* Images.xcassets */,
 				A08D1B0F1B6AF22F00250E14 /* Supporting Files */,
@@ -378,6 +385,16 @@
 			name = Vendor;
 			sourceTree = "<group>";
 		};
+		A0F1EF5A1BA9267600377FBF /* QuestionJSON */ = {
+			isa = PBXGroup;
+			children = (
+				A0F1EF5B1BA9268300377FBF /* discover_fallcolors.json */,
+				A0F1EF5C1BA9268300377FBF /* ledges_weathering_questions.json */,
+				A0F1EF5D1BA9268300377FBF /* ledges_microhabitat.json */,
+			);
+			name = QuestionJSON;
+			sourceTree = "<group>";
+		};
 		A3A208CD240441F3A114A87F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +501,8 @@
 				A0A9ADE91B7A803600B1E15B /* photo6.jpg in Resources */,
 				A0A9ADE71B7A803600B1E15B /* userpic2.jpg in Resources */,
 				A0A9ADED1B7A803600B1E15B /* photo2.jpg in Resources */,
+				A0F1EF5F1BA9268300377FBF /* ledges_weathering_questions.json in Resources */,
+				A0F1EF601BA9268300377FBF /* ledges_microhabitat.json in Resources */,
 				A0A9ADEB1B7A803600B1E15B /* photo4.jpg in Resources */,
 				A0A9ADE51B7A803600B1E15B /* userpic4.jpg in Resources */,
 				A0A9ADE31B7A803600B1E15B /* userpic6.jpg in Resources */,
@@ -492,6 +511,7 @@
 				A08D1B1D1B6AF22F00250E14 /* Images.xcassets in Resources */,
 				A0A9ADEA1B7A803600B1E15B /* photo5.jpg in Resources */,
 				A0A9ADEE1B7A803600B1E15B /* photo1.jpg in Resources */,
+				A0F1EF5E1BA9268300377FBF /* discover_fallcolors.json in Resources */,
 				A0A9ADE41B7A803600B1E15B /* userpic5.jpg in Resources */,
 				A0A9ADE61B7A803600B1E15B /* userpic3.jpg in Resources */,
 				A01389A41BA89B060004E356 /* restrooms.geojson in Resources */,

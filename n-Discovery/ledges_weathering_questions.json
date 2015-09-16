@@ -1,0 +1,331 @@
+{
+  "trackname": "Ledges Weathering",
+  "trackpoints": [
+    {
+      "coordinate": [
+        "-81.512117",
+        "41.220502"
+      ],
+      "title": "Overlook/Intro",
+      "description": "The Cuyahoga River and the rivers before it played an important role in shaping the modern landscape of the park. They carved this valley, developing the topography that allows us to stand at this high elevation. Despite our distance from the river now, water was and continues to be important to the Ledges. Let’s learn more about some of the ways that water helped form the Ledges and how weathering processes continue to change this environment.",
+      "questions": []
+    },
+    {
+      "coordinate": [
+        "-81.512465",
+        "41.220437"
+      ],
+      "title": "Evidence of Ancient Water",
+      "description": "The Sharon Conglomerate is a rock that forms much of the Ledges. It is sedimentary, meaning it formed from material deposited and joined into rock on the Earth’s surface. By taking a look at the individual grains, we can infer the path the grains traveled before they formed the rock. Let’s take a look for ourselves...",
+      "questions": [
+        {
+          "q_type": "single",
+          "q_description": "User multiple choice: The Sharon Conglomerate is easily identified it by its many white pebbles. Examine these large grains. What is the dominant shape?",
+          "q_answer": [
+            "1"
+          ],
+          "q_options": [
+            "Rounded  If yes, go to next question; can move some of the explanation here",
+            "Angular (If selected: “Take a closer look and don’t be afraid to touch the rock. Scientists consider this rounded.”"
+          ],
+          "q_response": "Explanation: Rocks often break at angles. When forces like wind and water transport rock grains, they wear down their edges and round them out. Very rounded grains indicate that they have traveled far, existed for a long time, or have been exposed to a competent erosional force--like a river! Like detectives, we can use our observations to build evidence to determine how grains and rocks end up where they are. The evidence here suggests that a river flowed through to deposit these pebbles."
+        },
+        {
+          "q_type": "single",
+          "q_description": "User multiple choice: Now think about splitting a rock apart in your hands. Do you imagine it to be smooth or angular? ",
+          "q_answer": [
+            "2"
+          ],
+          "q_options": [
+            "Smooth",
+            "Angular"
+          ],
+          "q_response": "Explanation: Rocks often break at angles. When forces like wind and water transport rock grains, they wear down their edges and round them out. Very rounded grains indicate that they have traveled far, existed for a long time, or have been exposed to a competent erosional force--like a river! Like detectives, we can use our observations to build evidence to determine how grains and rocks end up where they are. The evidence here suggests that a river flowed through to deposit these pebbles."
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.512117",
+        "41.220502"
+      ],
+      "title": "Honeycomb Weathering",
+      "description": "Compare the features you see here with the smoother parts of the rock face.",
+      "questions": [
+        {
+          "q_type": "single",
+          "q_description": "User multiple choice: The Sharon Conglomerate is easily identified it by its many white pebbles. Examine these large grains. What is the dominant shape?",
+          "q_answer": [
+            "2"
+          ],
+          "q_response": "Explanation: This is a form of chemical weathering called honeycomb! It developed after the rock formed. Like a sponge, the Ledges absorb rainfall in pores among the grains of sand and pebbles. The water then travels through the pore highway by way of interconnected channels, like lanes! The birch trees around here use their roots like straws to suck the water out from within. The water often carries cargo like dissolved salts. When wind evaporates the water on the surface, it leaves behind crystals of salt. These salts then dissolve the rock around them, forming pockets! ",
+          "q_options": [
+            "More likely part of the original rock formation (a primary characteristic)",
+            "More likely developed after the rock formed (a secondary characteristic)"
+          ]
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.512901",
+        "41.222019"
+      ],
+      "title": "Rocky Rainbow",
+      "description": "",
+      "questions": [
+        {
+          "q_type": "open",
+          "q_description": "User open text response or checklist:  How many colors do you see on this wall of rock?  What do you think made these colors?",
+          "q_answer": [
+            "0"
+          ],
+          "q_response": "Explanation: Water has a role in the beautiful colors we find throughout this outcrop: \nSome of the minerals in the rock here are rich in iron. When oxygen in water combines with iron, it forms iron oxide. This is rust! It gives the rocks a red or orange color in the same process that colors many metals. Think of rust as a trail left behind by water and try to trace its path across a rock!\nMoisture-loving organisms like mosses and lichen contribute the shades of green.  Lichen are a partnership between fungus and algae that thrive in extreme environments, like the bare rock faces here. ",
+          "q_options": []
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.513201",
+        "41.223827"
+      ],
+      "title": "Fracturing",
+      "description": "",
+      "questions": [
+        {
+          "q_type": "single",
+          "q_description": "User multiple choice: Take a step back and look at the Ledges. Is there any shape consistency in the rock formations and the cracks between them?",
+          "q_answer": [
+            "2"
+          ],
+          "q_options": [
+            "No: No consistency (Are you sure?  Let’s look at some more cracks and see if a pattern emerges)",
+            "Yes: Blocks of rocks with vertical cracks",
+            "Yes: Rounded boulders with curved cracks (Any rounding you observed came after the rock cracked.  Think back to the questions about grain shape)",
+            "I’m not sure (That’s okay.  Try looking at more rocks or take a closer look to find a pattern)"
+          ],
+          "q_response": "Explanation: Many of the rocks feature vertical cracks called joints. The rock is gradually pulled apart by the force of gravity.  Eventually, it splits along weak points in the rock.  As the cracks here widen, blocks slump away from the main structure. They glide on a film of underlying rainwater the way an ice cube that slides around a table as it melts. You’ll see many isolated blocks along the trail!"
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.512783",
+        "41.226442"
+      ],
+      "title": "Strata",
+      "description": "The Ledges are made up of layers of rock called strata that you can observe here and throughout the trail. The rock layers perhaps call to mind a tall stack of folded shirts. The strata, considered together, make up the overall rock formation.",
+      "questions": [
+        {
+          "q_type": "open",
+          "q_description": "User Activity: Rank the strata from oldest (A) to youngest (C)\nWant a Hint? Think about constructing a tall building. In which direction are new floors added?",
+          "q_answer": [
+            "0"
+          ],
+          "q_response": "Explanation: Like a building, the first (oldest) floor is at the bottom while newer (younger) floors are added to the top. As time passes, new rock material is deposited on top of the older material and forms beds of rock of varying thicknesses. Why do you think the pebbly Sharon Conglomerate sits high in the Cuyahoga Valley? It is the youngest formation here! Strata help us understand the timing of the processes that formed the land in the same way we know that the 5th floor of a building was added after the floors below."
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.512364",
+        "41.2277"
+      ],
+      "title": "Liesegang Rings",
+      "description": "",
+      "questions": [
+        {
+          "q_type": "open",
+          "q_description": "User-generated open response: Is there anything distinct about the color pattern in the sandstone you see here? What does it call to mind that we saw earlier?\n[Look for keywords: iron, oxide, rust, rings, bands, streaks, parallel, red, orange, lines, pattern etc.]",
+          "q_answer": [
+            "0"
+          ],
+          "q_response": "Explanation: We call this pattern of iron oxide Liesegang Rings or Bands. "
+        },
+        {
+          "q_type": "multi",
+          "q_description": "User multiple choice (Check all that apply): Taking from what you already know about the formation of rust, how do you think these bands may have formed? (Post-Test question about iron-oxide formation)",
+          "q_options": [
+            "Mosses on the rock",
+            "Water in or on the rock",
+            "Oxygen in the water",
+            "Lichen on the rock",
+            "Iron-rich minerals in the rock"
+          ],
+          "q_answer": [
+            "2",
+            "3",
+            "5"
+          ],
+          "q_response": "Explanation: These bands often form by the movement of iron-rich water through the sediment, which rhythmically deposits rust. Sometimes you will see the bands follow fractures or layers in the sandstone that act like open pathways for water to travel. Othertimes, the bands represent water running across the surface of the rock."
+        },
+        {
+          "q_type": "single",
+          "q_description": "User multiple choice: Can you find any evidence in the sandstone that most of the bands follow a pattern inherent in the rock structure? Gently follow some of the lines with your fingertips, paying attention to whether they follow the edges of the thin strata.",
+          "q_options": [
+            "Yes",
+            "No"
+          ],
+          "q_answer": [
+            "1"
+          ],
+          "q_response": "Explanation: Looking at the bulging lobe near the top of this structure, you may notice that the iron bands curve with the shape. Many of the bands also seem to lie along ridges in the sandstone. These observations lead us to suppose that the pattern of the bands coincide with the layers of the rock--the water likely slid along the planes of the layers where it could travel more easily. This also helps reveal the layering pattern in the rock!"
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.512128",
+        "41.228023"
+      ],
+      "title": "Contact Spring",
+      "description": "Here we see further evidence of flowing water.",
+      "questions": [
+        {
+          "q_type": "open",
+          "q_description": "User response: Where might this water be coming from? (Post-Test question about permeability/groundwater)",
+          "q_options": [],
+          "q_answer": [],
+          "q_response": "This stream is created by water running out of the Ledges themselves! The sandy formation you see here sits on top of a layer of shale. While the shale also holds water, it is much harder for the water to make its way through the fine channels between its pores. Think about a soaking sponge sitting on a plate. When the water draining from the Ledges reaches the contact between the sandstone and the shale (where the sponge touches the plate), it rides along that plane until it seeps out the edge (the plate pools with water). That creates a contact spring like we see here."
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.509628",
+        "41.227894"
+      ],
+      "title": "Widening the Cracks ",
+      "description": "",
+      "questions": [
+        {
+          "q_type": "single",
+          "q_description": "In their search for water, how might the birches we mentioned earlier widen the cracks? Examine the ways they interact with the rock for evidence.",
+          "q_answer": [
+            "2"
+          ],
+          "q_options": [
+            "The shady canopy cools and contracts the sandstone, forming cracks.",
+            "Growing roots force apart the cracks",
+            "Birds roosting in branches deposit acidic droppings"
+          ],
+          "q_response": "Explanation: Perhaps you’ve eaten a big meal while wearing tight pants. As you temporarily expand with food, the waist of your pants stretches. Maybe the button pops off because of the stress! Now, let’s examine the birches and the Ledges. You may notice the roots positioned in the joints. As they grow (like your stomach), they force the rock apart (like stretching your pants) in a process called root wedging. There are many stunning examples of this along the trail!"
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.509031",
+        "41.227383"
+      ],
+      "title": "Grain Size",
+      "description": "",
+      "questions": [
+        {
+          "q_type": "single",
+          "q_description": "Do you think these white pebbles were transported by the river when it was flowing",
+          "q_answer": [
+            "1"
+          ],
+          "q_options": [
+            "Fast",
+            "Slow"
+          ],
+          "q_response": "It takes more force to transport these heavy pebbles than the sand grains in the formation. That means a fast-flowing river transported them. When the flow slowed, they settled to the bottom. In contrast, the sand grains of the sandstone layers are very lightweight. It doesn’t take much force to move them. They were able to finally settle during a time of relative quiet or where the water slowed down, perhaps in an ancient floodplain."
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.509027",
+        "41.226926"
+      ],
+      "title": "Shape of the Layers",
+      "description": "",
+      "questions": [
+        {
+          "q_type": "open",
+          "q_description": "We can see that these beds generally lie horizontally. However, are there places where you can see a change in the orientation of layers within a bed? Something that breaks the usual horizontal pattern?",
+          "q_answer": [],
+          "q_options": [],
+          "q_response": "This is cross-bedding. Cross-bedding indicates the flow direction of the water that transported and deposited the material--the paleocurrent.  Cross-bedding here indicates a river that flowed from the north.  To learn more about the formation of these structures, go on the “Patterns in Nature” Adventure Track!"
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.508673",
+        "41.226748"
+      ],
+      "title": "Option to exit West",
+      "description": "You can either continue north up the rocky path or take the exit to the west to get back on the flat part of the trail. You will then have the option to head through a slight  squeeze through the rocks.",
+      "questions": []
+    },
+    {
+      "coordinate": [
+        "-81.508942",
+        "41.227216"
+      ],
+      "title": "Widening the Cracks Part 2",
+      "description": "",
+      "questions": [
+        {
+          "q_type": "single",
+          "q_description": "We already know that some of the chemical cargo of water can help dissolve rocks. But how about water in the winter?",
+          "q_answer": [
+            "2"
+          ],
+          "q_options": [
+            "Chemicals in cold water dissolve rocks faster, expanding the cracks (Cold water can’t hold as many chemicals as warm water, so the rocks dissolve slower in winter.)",
+            "Freezing water expands, widening the cracks"
+          ],
+          "q_response": "Water expands when it freezes just like roots expand when they grow. The ice wedged in the cracks in winter forces the cracks to expand. Most drivers are familiar with ice wedging in the pavement of roads--potholes! The same forces act here at the Ledges, just without so many flat tires."
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.508942",
+        "41.226571"
+      ],
+      "title": "Can You Fit the Joints Back Together? ",
+      "description": "Take a look at the bedding features on these parallel walls of the Ledges. Do you see any large-scale patterns? Pinpoint a zone on one wall and try to find the same pattern on the opposite wall (Hint: Look for unique patterns that show up at roughly the same heights on either wall).",
+      "questions": [
+        {
+          "q_type": "open",
+          "q_description": "Taking from what you’ve learned so far today, what could explain the mirroring of patterns that you’ve found on either wall?",
+          "q_answer": [],
+          "q_options": [],
+          "q_response": "By connecting patterns, we can see that this outer wall used to be attached to the inner wall before it split off under stress and began to slump away. Where you are standing is where the rock split apart under stress!"
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.508427",
+        "41.226377"
+      ],
+      "title": "How Well Could They Fit?",
+      "description": "If we were able to move the blocks like puzzle pieces, some blocks would fit very well with their parent rock (the rock or rock section from which they broke) while others would not.",
+      "questions": [
+        {
+          "q_type": "open",
+          "q_description": "Why do you think some of the rocks may not fit well with their parent rocks anymore? What factors may be involved in this?",
+          "q_answer": [],
+          "q_options": [],
+          "q_response": "The overarching factors are the weathering forces at play on the newly exposed material (anything we have already covered) and how long that material has been exposed. Looking around the trail, you may see some examples of isolated blocks with very smooth bedding patterns. These have undergone much more weathering by water or wind and may be much harder to fit back to their parent rocks."
+        }
+      ]
+    },
+    {
+      "coordinate": [
+        "-81.508341",
+        "41.226119"
+      ],
+      "title": "Final Thoughts",
+      "description": "Change is a natural feature of the environment. This trail has shown us just that--much of the history of change is written in the rocks! We have observed just some of the roles water and weathering forces have in creating, maintaining, and changing the environment here at the Ledges. The more we can do to enjoy this place while minimizing our personal contributions to change, the better we can examine the natural history of change in the future. Use your observational skills to investigate nature and change throughout the park!",
+      "questions": []
+    }
+  ]
+}

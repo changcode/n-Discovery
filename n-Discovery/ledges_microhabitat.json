@@ -1,0 +1,224 @@
+{
+  "trackname": "Ledges Microhabitat",
+  "trackpoints":[
+  {
+    "coordinate": [
+      "-81.512107",
+      "41.20389"
+    ],
+    "title": "Overlook/Intro",
+    "description": "From the overlook it is easy to observe the forest and see it as a whole.  Now, look closer at the individual trees.",
+    "questions": [
+      {
+        "q_type": "open",
+        "q_description": "What kinds of shapes can you pick out?  How might these small variations affect the kind and variety of animals?",
+        "q_answer": [
+        ],
+        "q_options": [
+      ],
+        "q_response": " These small variations form microhabitats.  Most plants and animals need certain conditions to live in a particular area.  A variety of environmental factors at a fine scale creates many microhabitats.  Let’s examine the Ledges as a home for an array of organisms and explore the mosaic of microhabitats within it."
+      }
+    ]
+  },
+  {
+    "coordinate": [
+      "-81.512257",
+      "41.220373"
+    ],
+    "title": "Deciduous Daredevils",
+    "description": "Yellow birches are typically a riparian (river) tree, but here we find them clinging to rock away from rivers and lakes",
+    "questions": [
+      {
+        "q_type": "single",
+        "q_description": "What allows them to live here?",
+        "q_answer": [
+          "2"
+        ],
+        "q_options": [
+          "Streams and springs that run out of the sandstone (The streams and springs are a result of the correct answer)",
+          " Pockets of stored water within the sandstone",
+          "Water retained by the deep, organic soil on the Ledges (Feel free to touch the soil.  It tends to be thin and sandy in this region)"
+        ],
+        "q_response": "The sandstone is permeable. It stores water that slowly travels through pore channels within the rock.  Birches take advantage of that moisture just like they would along a river by using their roots like straws. Just a little bit of extra water allows this forest to accommodate some otherwise unexpected guests."
+      }
+    ]
+  },
+  {
+    "coordinate": [
+      "-81.512975692749",
+      "41.2221323884982"
+    ],
+    "title": "Honeycomb",
+    "description": "",
+    "questions": [
+      {
+        "q_type": "multi",
+        "q_description": "These little pockets and cavities provide great habitat. Who might use these as homes? Look for evidence in the pockets!",
+        "q_answer": [
+          "2",
+          "4"
+        ],
+        "q_options": [
+          "Birds (Most of Ohio’s birds choose the Ledges because of the trees, not the pockets in rocks)",
+          "Insects and spiders",
+          "Deer and coyote (These guys are a little big to hide in the rocks)",
+          "Rodents"
+        ],
+        "q_response": " All kinds of plants and small critters like spiders live in these pockets. If you keep your eyes open, you may even see some small rodents hanging out in there! Just remember, these are their homes so please be a respectful guest and only use your eyes."
+      },
+      {
+        "q_type": "open",
+        "q_description": " See any interesting uses of the honeycomb as homes? Submit a photo and tag it with “CombHome.”",
+        "q_answer": [
+        ],
+        "q_options": [
+      ],
+        "q_response": " The funky pattern you see on this sandstone is known as honeycomb weathering, a type of chemical and physical weathering of the rock. If you’d like to know more about how it forms, take the “Weathering and Water” Adventure Track here at the Ledges."
+      }
+    ]
+  },
+    {
+    "coordinate": [
+      "-81.513426",
+      "41.224957"
+    ],
+    "title": " A Tree Fell in the Forest",
+    "description": "",
+    "questions": [
+      {
+        "q_type": "multi",
+        "q_description": "What happened here?  Observe the area and compare it to the surrounding forest.",
+        "q_answer": [
+          "1",
+          "4"
+        ],
+        "q_options": [
+          "Different/more plants than the surrounding forest",
+          "Fewer plants than the surrounding forest (Take a closer look at the kinds of plants here.)",
+          "Less sunlight (Maybe a cloud came by.  Can you see the sky?  That seems different from the solid forest.)",
+          "More sunlight",
+          "Nothing different (Take a closer look and really examine both areas.)"
+        ],
+        "q_response": " The fallen tree removed some cover, opening the forest floor to more sunlight.  And look, many understory and sun-loving plants popped up. Without the protection of larger trees, forces like wind also have a stronger effect.  As the tree breaks down, it aids soil production and provides nutrients. This small gap in the larger woods is a great example of a microhabitat within the larger hemlock-birch community. "
+      }
+    ]
+  },
+  {
+    "coordinate": [
+      "-81.511999",
+      "41.228136"
+    ],
+    "title": "Seep",
+    "description": "",
+    "questions": [
+      {
+        "q_type": "single",
+        "q_description": " How might a seep spring influence the plants and animals nearby? Look for evidence around the seep",
+        "q_answer": [
+          "2"
+        ],
+        "q_options": [
+          " Plant roots drown, so no plants can grow nearby (Are you sure? Take a look at the kinds of plants you can see.)",
+          " Water-loving plants crowd around here and almost nowhere else around",
+          "No difference (Are you sure?)"
+        ],
+        "q_response": "We already know that the Ledges slowly release stored rainwater that often seeps out around the trail. These sources of water can provide ephemeral (temporary) habitat for amphibians and support water-loving plants like skunk cabbage. "
+      }
+    ]
+  },
+    {
+    "coordinate": [
+      "-81.508856",
+      "41.226538"
+    ],
+    "title": "Joint",
+    "description": "Hike up into the fracture to experience a microclimate for yourself.  The rocks keep the air noticeably cooler.   Feel for yourself, but be aware there are a few tight squeezes, but only for a short while.  Nothing to fear!",
+    "questions": [
+      {
+        "q_type": "single",
+        "q_description": "Looking around, what do you think prefers this cool, humid microclimate?",
+        "q_answer": [
+          "2"
+        ],
+        "q_options": [
+          "Snakes (Snakes are cold blooded and prefer warmth to keep them moving.)",
+          " Mosses and ferns",
+          "Big trees (How would trees get enough sunlight to grow?  The walls limit how much energy they can collect.)"
+        ],
+        "q_response": " Mosses and ferns love the cool, humid area between the rocks."
+      },
+      {
+        "q_type": "single",
+        "q_description": "Did you notice anything else between the walls?",
+        "q_answer": [
+          "2"
+        ],
+        "q_options": [
+          "No (Move on.)",
+          " Yes, carved faces"
+        ],
+        "q_response": "We are unsure of the identity of this artist from the past. While historic carvings are exciting to discover, please be respectful to this geologic formation and to future park-goers by not adding to the carvings here."
+      }
+    ]
+  },
+    {
+    "coordinate": [
+      "-81.508459",
+      "41.226199"
+    ],
+    "title": "Ice Box Cave",
+    "description": "While not a true cave, Ice Box Cave is the result of broken blocks of the Ledges and houses a small population of bats.",
+    "questions": [
+      {
+        "q_type": "open",
+        "q_description": "Imagine yourself inside of a cave and draw from what you’ve learned about the Ledges to answer the following questions.What is the microclimate like? Hot and dry or Cool and humid; How much sunlight does it get? Little sunlight or Much sunlight",
+        "q_answer": [
+        ],
+        "q_options": [
+        ],
+        "q_response": "The water moving through the Ledges makes it cool and humid while the Ledges themselves block the cave from receiving much sunlight. The lack of sunlight keeps it dark and helps maintain the coolness of the cave."
+      },
+      {
+        "q_type": "single",
+        "q_description": " Knowing that bats are nocturnal (they sleep in the day and are active at night), why might caves be a good habitat for them?",
+        "q_answer": [
+          "2"
+        ],
+        "q_options": [
+          "Protects them while they rest during the day",
+          "A place to store food for when times are lean (Most bats catch food and immediately eat it, rather than store it for later.)",
+          " It’s like night-time all the time (Partially, but look deeper into the underlying reason.)"
+        ],
+        "q_response": "The darkness of caves provide important shelter for bats that keeps them hidden from predators during the day while they are sleeping. "
+      }
+    ]
+  }, 
+   {
+    "coordinate": [
+      "-81.507794",
+      "41.22407"
+    ],
+    "title": "Another Disturbance",
+    "description": "This patch is similar to the site we saw earlier where the tree fell.  However, a different amount of time has passed here.",
+    "questions": [
+      {
+        "q_type": "open",
+        "q_description": "Observe the area. Do you think this disturbance happened before or after the other one we saw? [Before] [After]",
+        "q_answer": [
+        ],
+        "q_options": [
+        ],
+        "q_response": "Many low-lying plants have had the time to populate the area, taking advantage of the sun coming through the opening in the canopy. The plethora of new plants here in comparison with the other site is a good indicator that the area has been exposed to these new conditions for longer."
+      },
+      {
+        "q_type": "open",
+        "q_description": "What evidence has lead to your guess?",
+        "q_answer": [
+        ],
+        "q_options": [
+        ],
+        "q_response": "Shrubs, like invasive multiflora rose and native grapevine thrive in this newly well-lit area.  They provide cover for small animals and plants that like a little more shade.  Soon, saplings will fill in the gaps and the forest will take over again.  Look for birds around the edges of the opening.  Some species, like the gray catbird, specialize in living in these areas of transition."
+      }
+      ]
+    }
+]}

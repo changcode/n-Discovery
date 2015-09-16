@@ -1,0 +1,191 @@
+{
+  "trackname": "Fall Colors",
+  "trackpoints":[
+  {
+    "coordinate": [
+      "-81.53813",
+      "41.276715"
+    ],
+    "title": "Overlook/Intro",
+    "description": "Every October, Northeast Ohio experiences one of nature’s best displays, fall color change. With color highlighting so many forest features, it is a perfect time to build a better understanding of forest ecology. Let’s find out what all these colors can tell us about the composition (the mix of species that make up the forest. Scientists often research how and why it changes across locations and time.), structure (how species are arranged within the forest. Scientists often look at how forest structure supports plant and animal diversity and survival.), and function (how things happen in a forest. Scientists look at how energy and nutrients flow through the forest and how species interact.) of the forest!~Blue above indicates potential ability to click word for written definition~",
+    "questions": [
+      {
+        "q_type": "open",
+        "q_description": "Where did the green go?",
+        "q_answer": [
+        ],
+        "q_options": [
+      ],
+        "q_response": "You can think of leaves as tree’s solar panels. The green is caused by the pigment chlorophyll that captures sunlight and converts it into food. As winter nears, trees stop producing chlorophyll. Orange and yellow pigments are in the leaf all year, but concealed by the green chlorophyll. As the existing chlorophyll breaks down, the leaves reveal the fantastic yellows and oranges hidden within. We will explore red pigments later on this hike."
+      }
+    ]
+  },
+  {
+    "coordinate": [
+      "-81.540267",
+      "41.277164"
+    ],
+    "title": "Shedding Their Leafy Coat",
+    "description": "Boardwalk, first corner by hemlocks",
+    "questions": [
+      {
+        "q_type": "multi",
+        "q_description": "Why do you think trees lose their leaves?  Why could leaves be a disadvantage in winter? (Hint: Consider the analogy of animal hibernation and the temperature and daylight changes that occur as we transitions from summer to fall to winter).",
+        "q_answer": [
+          "1",
+          "2"
+        ],
+        "q_options": [
+          "Leaves catch snow, weighing down branches (If only checked: That’s part of the reason; look deeper in the leaves themselves for more)",
+          "Cold temperatures damage the food-making processes within leaves",
+          "Losing leaves before winter is merely coincidence (If checked: If there is no reason, why is the phenomenon so consistent and wide-spread?)"
+        ],
+        "q_response": "Fall color change and leaf loss are energy conservation in action. While leaves produce food in the heat and sun of the summer, they lose heat and water in the coldness of the winter. Wide, flat leaves can also catch snow, which weighs down branches and freezes the leaves. However, evergreen trees have adaptations that allow them to keep their leaves through winter."
+      },
+      {
+        "q_type": "multi",
+        "q_description": " What are some of these adaptations? Find evidence around you by searching for the trees that don’t show any color change. (Post-test about snow accumulation being a risk for trees in the winter)",
+        "q_answer": [
+          "1",
+          "3",
+          "5"
+        ],
+        "q_options": [
+          "Needle-like leaves",
+          "Large, fan-like leaves (Imagine holding an umbrella in a snowstorm. It would get pretty heavy)",
+          " Waxy leaves",
+          " Mushroom-shaped tree body (Imagine holding an umbrella in a snowstorm. It would get pretty heavy)",
+          " Cone-shaped tree body"
+        ],
+        "q_response": "Needle-like leaves with a waxy coating protect against the accumulation of heavy, cold snow. While mushroom-shaped trees with wide leaves are vulnerable to the build-up of fallen snow, the cone shape that defines many coniferous trees allows fallen snow to slide down and off the trees. Evergreens, like hemlocks, are prevalent in the park and exhibit all of these adaptations for winter."
+      }
+    ]
+  },
+  {
+    "coordinate": [
+      "-81.540315",
+      "41.278048"
+    ],
+    "title": "Color Coding",
+    "description": "Split of bike trail and Brandywine Gorge",
+    "questions": [
+      {
+        "q_type": "single",
+        "q_description": "What is/are the dominant canopy color(s)?",
+        "q_answer": [
+          "3"
+        ],
+        "q_options": [
+          "Green",
+          "Red",
+          "Yellow",
+          "Orange",
+          "Brown"
+        ],
+        "q_response": "Different trees turn different colors. Sugar maples add yellow, orange, and red to fall scenery; beech trees range from yellow to bronze. Scientists are still exploring the reasons why trees change brilliant colors just before losing their leaves. Theories include protection from sunlight (just like we use sunscreen to protect our skin) , a warning to insects that the tree has strong defenses, or an indicator of good food for fruit-eating birds. (Check out the Citizen Science projects to see if you can help with color-change research as a park-goer!)"
+      }
+    ]
+  },
+    {
+    "coordinate": [
+      "-81.54067",
+      "41.277925"
+    ],
+    "title": "Topography",
+    "description": "Wouldn't be a bad stop just down the Gorge trail, not too difficult Down Stanford, see topography potential 2",
+    "questions": [
+      {
+        "q_type": "open",
+        "q_description": "",
+        "q_answer": [
+        ],
+        "q_options": [
+        ],
+        "q_response": "The deeply carved topography of this valley landscape creates varied growing conditions. The tree diversity that results adds variety to fall colors. Fall change comes later to bottomland forests. There you’ll see trees that do better in the wetter conditions near Brandywine Creek. They include the Ohio buckeye, one of the earliest trees to change colors and lose its leaves. Oaks are common trees in the drier areas at higher elevations. They are some of the last to change color, extending our fall-color season into November when they display deep reds and browns."
+      }
+    ]
+  },
+  {
+    "coordinate": [
+      "-81.539394",
+      "41.276934"
+    ],
+    "title": "Initiating Change",
+    "description": "Bench above stairs",
+    "questions": [
+      {
+        "q_type": "multi",
+        "q_description": " What do you think triggers leaves to change color??",
+        "q_answer": [
+          "1",
+          "2"
+        ],
+        "q_options": [
+          "Daylight",
+          "Temperature",
+          " Solar angle (You have good instinct, but research indicates something else)",
+          " Rainfall (While heavy rain can dull fall colors, because it reduces sugar production in the leaves; it does not trigger the color change)"
+        ],
+        "q_response": "Studies show that the best predictors of leaf change are temperature and day length.  Shorter, cooler days trigger trees to recover nutrients from their leaves."
+      },
+      {
+        "q_type": "multi",
+        "q_description": "You saw how trees at the top of the hill turn sooner than those lower on the hill. What is different at these higher elevations that would trigger color change sooner? (Post-test about the effect of topography)",
+        "q_answer": [
+          "2"
+        ],
+        "q_options": [
+          "Shorter days (High elevations don't have significantly different day length)",
+          "Cooler temperatures"
+        ],
+        "q_response": "Weather affects color intensity; cool nights and warm sunny days are ideal for producing bright colors by increasing the sugars and intensity of pigments. Because weather can play a role in color change, scientists are beginning to study the effect of climate change on fall colors. Scientists have already recorded later color changes in New England due to warmer summer temperatures.  Some estimates predict that leaves may change three weeks later if the climate continues to warm at the same rate. Feel free to go down the stairs to view the falls. It's stunning in all seasons."
+      }
+    ]
+  },
+    {
+    "coordinate": [
+      "-81.538965",
+      "41.276727"
+    ],
+    "title": "Understory",
+    "description": "Upper Boardwalk, for accessibility",
+    "questions": [
+      {
+        "q_type": "single",
+        "q_description": "Look below the tops of trees.  Do other plants change colors?",
+        "q_answer": [
+          "2"
+        ],
+        "q_options": [
+          "I don’t see any",
+          "  Yes, I see a few"
+        ],
+        "q_response": "Vines that disappear amongst the summer greenery stand out in fall. Vines add complexity and contribute to forest habitat diversity. Virginia creeper and poison ivy are both tree-climbing vines that become more apparent when their leaves turn red. Scientists believe that the fall color attracts birds that eat their fruits and spread their seeds. In particular, white poison ivy berries stand out against the red leaves. "
+      }
+    ]
+  },
+    {
+    "coordinate": [
+      "-81.540107",
+      "41.276735"
+    ],
+    "title": "Where did the green go?  Why don’t trees stay green all year?",
+    "description": "Trees use the green part of leaves to make food.  Inside leaves, the plant uses sunlight and air to make food.  In winter, there is less sunlight.  Trees let the green fade.  Yellow and orange hidden behind the green are revealed in the fall.FInd the biggest leaf you can.  Take a photo!  Be sure to include something like a coin for scale.Become a squirrel and find a nut or acorn to store for the winter!Trees make their own food.  Animals, like squirrels, have to find food. They scavenge for and store food in the fall and save it for when food gets harder to find during the cold winter.",
+    "questions": [
+      {
+        "q_type": "open",
+        "q_description": "Try to find a leaf of each color:",
+        "q_answer": [
+        ],
+        "q_options": [
+          "Green",
+          "Red",
+          "Yellow",
+          "Orange",
+          "Brown"
+        ],
+        "q_response": "Leaves from different kinds of trees change to different colors. The colors come from different materials inside the leaves. Combinations of these materials make the different colors you see."
+      }
+    ]
+  }
+]}

@@ -8,6 +8,8 @@
 
 #import "SLParallaxController.h"
 
+#import "NDQuestionTableViewController.h"
+
 #define SCREEN_HEIGHT_WITHOUT_STATUS_BAR     [[UIScreen mainScreen] bounds].size.height - 20
 #define SCREEN_WIDTH                         [[UIScreen mainScreen] bounds].size.width
 #define HEIGHT_STATUS_BAR                    20
@@ -32,6 +34,8 @@
 @property (nonatomic)           BOOL                    isShutterOpen;
 @property (nonatomic)           BOOL                    displayMap;
 @property (nonatomic)           float                   heightMap;
+
+@property (strong, nonatomic)   NSDictionary            *jsonFromFile;
 
 @end
 
@@ -59,6 +63,13 @@
     [super viewDidLoad];
     [self setupTableView];
     [self setupMapView];
+    
+    
+    [self loadJSONFile];
+    self.mapView.showsUserLocation = YES;
+    [self zoomToUserLocation:self.mapView.userLocation minLatitude:0 animated:YES];
+    [self drawFacilities];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,7 +115,7 @@
 }
 
 -(void)setupMapView{
-    self.mapView                        = [[MGLMapView alloc] initWithFrame:CGRectMake(0, self.default_Y_mapView, SCREEN_WIDTH, self.heighTableView)];
+    self.mapView                        = [[MGLMapView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.heighTableView)];
     [self.mapView setShowsUserLocation:YES];
     self.mapView.delegate = self;
     [self.view insertSubview:self.mapView
@@ -145,7 +156,7 @@
                           delay:0.1
                         options: UIViewAnimationOptionCurveEaseOut
                      animations:^{
-                         self.tableView.tableHeaderView     = [[UIView alloc] initWithFrame: CGRectMake(0.0, 0.0, self.view.frame.size.width, self.minHeighTableViewHeader)];
+                         self.tableView.tableHeaderView     = [[UIView alloc] initWithFrame: CGRectMake(0.0, self.Y_tableViewOnBottom, self.view.frame.size.width, self.minHeighTableViewHeader)];
                          self.mapView.frame                 = CGRectMake(0, FULL_Y_OFFSET, self.mapView.frame.size.width, self.heightMap);
                          self.tableView.frame               = CGRectMake(0, self.Y_tableViewOnBottom, self.tableView.frame.size.width, self.tableView.frame.size.height);
                      }
@@ -173,8 +184,8 @@
                         options: UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          self.mapView.frame             = CGRectMake(0, self.default_Y_mapView, self.mapView.frame.size.width, self.heighTableView);
-                         self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.headerYOffSet, self.view.frame.size.width, self.heighTableViewHeader)];
-                         self.tableView.frame           = CGRectMake(0, 200, self.tableView.frame.size.width, self.tableView.frame.size.height);
+                         self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 20, self.view.frame.size.width, 0)];
+                         self.tableView.frame           = CGRectMake(0, 68, self.tableView.frame.size.width, self.tableView.frame.size.height - 68);
                      }
                      completion:^(BOOL finished){
                          // Enable cells selection
@@ -205,7 +216,7 @@
         headerMapViewFrame.origin.y = self.headerYOffSet - ((scrollOffset / 2));
     } else {
         // Scrolling Up -> normal behavior
-        headerMapViewFrame.origin.y = self.headerYOffSet - scrollOffset;
+        headerMapViewFrame.origin.y = self.headerYOffSet - scrollOffset / 2;
     }
     self.mapView.frame = headerMapViewFrame;
 
@@ -226,14 +237,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"goToQuestion" sender:nil];
+    self.hidesBottomBarWhenPushed = YES;
+    [self performSegueWithIdentifier:@"goToQuestion" sender:_jsonFromFile[@"trackpoints"][indexPath.row][@"questions"]];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"goToQuestion"]) {
+        NDQuestionTableViewController *vc = segue.destinationViewController;
+        vc.QuestionData = (NSArray *)sender;
+    }
+}
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return [(NSArray *)_jsonFromFile[@"trackpoints"] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -264,7 +283,7 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                           reuseIdentifier:identifier];
     }
-    [[cell textLabel] setText:@"Hello World !"];
+    [[cell textLabel] setText:[(NSArray *)_jsonFromFile[@"trackpoints"] objectAtIndex:indexPath.row][@"title"]];
     return cell;
 }
 
@@ -291,19 +310,12 @@
 
 #pragma mark - MapView Delegate
 
-- (void)zoomToUserLocation:(CLLocation *)userLocation minLatitude:(float)minLatitude animated:(BOOL)anim
+- (void)zoomToUserLocation:(MGLUserLocation *)userLocation minLatitude:(float)minLatitude animated:(BOOL)anim
 {
-//    if (!userLocation)
-//        return;
-//    MKCoordinateRegion region;
-//    CLLocationCoordinate2D loc  = userLocation.location.coordinate;
-//    loc.latitude                = loc.latitude - minLatitude;
-//    region.center               = loc;
-//    region.span                 = MKCoordinateSpanMake(.05, .05);       //Zoom distance
-//    region                      = [self.mapView regionThatFits:region];
-//    [self.mapView setRegion:region
-//                   animated:anim];
-    
+    if (!userLocation)
+        return;
+    CLLocationCoordinate2D loc  = CLLocationCoordinate2DMake([_jsonFromFile[@"trackpoints"][0][@"coordinate"][1] doubleValue], [_jsonFromFile[@"trackpoints"][0][@"coordinate"][0] doubleValue]);
+    [self.mapView setCenterCoordinate:loc zoomLevel:14 animated:YES];
 }
 
 //-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
@@ -316,7 +328,26 @@
 //                     minLatitude:self.latitudeUserUp
 //                        animated:self.userLocationUpdateAnimated];
 //}
+- (void)drawFacilities
+{
+    for (NSDictionary *feature in _jsonFromFile[@"trackpoints"]) {
+        MGLPointAnnotation *marker = [[MGLPointAnnotation alloc] init];
+        marker.coordinate = CLLocationCoordinate2DMake([feature[@"coordinate"][1] doubleValue], [feature[@"coordinate"][0] doubleValue]);
+        marker.title = feature[@"title"];
+        marker.subtitle = feature[@"descriotion"];
+        [self.mapView addAnnotation:marker];
+    }
+}
 
+- (MGLAnnotationImage *)mapView:(MGLMapView * __nonnull)mapView imageForAnnotation:(id<MGLAnnotation> __nonnull)annotation
+{
+    return nil;
+}
+
+- (BOOL)mapView:(MGLMapView * __nonnull)mapView annotationCanShowCallout:(id<MGLAnnotation> __nonnull)annotation
+{
+    return YES;
+}
 #pragma mark - UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     if (gestureRecognizer == self.tapTableViewGesture) {
@@ -324,4 +355,15 @@
     }
     return YES;
 }
+
+#pragma mark - Load & Handle JSON
+- (void)loadJSONFile {
+    NSString *sampleFile = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:self.jsonfile];
+    NSData *data = [NSData dataWithContentsOfFile:sampleFile];
+    _jsonFromFile = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    self.title = _jsonFromFile[@"trackname"];
+}
+
+
+
 @end

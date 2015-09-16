@@ -15,4 +15,8 @@
 
 @property (strong, readonly, nonatomic) RETableViewSection *quesitonSection;
 @property (strong, readonly, nonatomic) RETableViewSection *answerSection;
+
+@property (strong, readwrite, nonatomic) NSArray *QuestionData;
+@property (strong, readwrite, nonatomic) NSDictionary *UserData;
+
 @end

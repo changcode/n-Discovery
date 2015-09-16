@@ -37,8 +37,9 @@
 @property (nonatomic)           BOOL                                regionAnimated;
 @property (nonatomic)           BOOL                                userLocationUpdateAnimated;
 
+@property (nonatomic)           NSString                            *jsonfile;
 // Move the map in terms of user location
 // @minLatitude : subtract to the current user's latitude to move it on Y axis in order to view it when the map move
-- (void)zoomToUserLocation:(CLLocation *)userLocation minLatitude:(float)minLatitude animated:(BOOL)anim;
+- (void)zoomToUserLocation:(MGLUserLocation *)userLocation minLatitude:(float)minLatitude animated:(BOOL)anim;
 
 @end
