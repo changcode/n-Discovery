@@ -23,8 +23,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MGLAccountManager setAccessToken:@"pk.eyJ1IjoiY2hhbmdzaHUxOTkxIiwiYSI6InlQbmlERXMifQ.c12pyT4RSGAc6N0eloV3Eg"];
-//    [self handleLaunchImage];
+    [self handleLaunchImage];
     [self handleLocationManger];
+    
+    UIUserNotificationSettings *userSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeSound | UIUserNotificationTypeBadge | UIUserNotificationTypeAlert categories:nil];
+    [application registerUserNotificationSettings:userSettings];
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
     return YES;
 }
 
@@ -73,11 +78,23 @@
 }
 
 - (void)handleEnterRegionEvent:(CLRegion *)region {
-#warning needs implements
+    NSLog(@"Enter place");
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground ){
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.alertBody = [NSString stringWithFormat:@"You have entered someplace, %@ nearby",region.identifier];
+        notification.soundName = @"Default";
+        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+    }
 }
 
 - (void)handleExitRegionEvent:(CLRegion *)region {
-#warning needs implements
+    NSLog(@"exit place");
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground ){
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.alertBody = [NSString stringWithFormat:@"You just left %@",region.identifier];
+        notification.soundName = @"Default";
+        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+    }
 }
 
 #pragma-mark RegionMethods
@@ -91,6 +108,10 @@
     if ([region isKindOfClass:[CLCircularRegion class]]) {
         [self handleExitRegionEvent:region];
     }
+}
+
+- (void)handleRegionEvent:(CLRegion*) region {
+    
 }
 
 @end

@@ -15,9 +15,11 @@
 		A01389A31BA89B060004E356 /* facilities.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A013899E1BA89B060004E356 /* facilities.geojson */; };
 		A01389A41BA89B060004E356 /* restrooms.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A013899F1BA89B060004E356 /* restrooms.geojson */; };
 		A01389A51BA89B060004E356 /* trails8.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A01389A01BA89B060004E356 /* trails8.geojson */; };
+		A048F8391BAA6FA600F72BBC /* myWebsite.cer in Resources */ = {isa = PBXBuildFile; fileRef = A048F8381BAA6FA600F72BBC /* myWebsite.cer */; };
 		A07031691B72485500F02AD9 /* NDLearnAsUGoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07031681B72485500F02AD9 /* NDLearnAsUGoTableViewController.m */; };
 		A070316E1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A070316D1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.m */; };
 		A07031751B724C1500F02AD9 /* ListImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A07031741B724C1500F02AD9 /* ListImageCell.m */; };
+		A07795331BAA00250021CA27 /* testINADV_micro.GPX in Resources */ = {isa = PBXBuildFile; fileRef = A07795321BAA00250021CA27 /* testINADV_micro.GPX */; };
 		A08D1B121B6AF22F00250E14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A08D1B111B6AF22F00250E14 /* main.m */; };
 		A08D1B151B6AF22F00250E14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A08D1B141B6AF22F00250E14 /* AppDelegate.m */; };
 		A08D1B181B6AF22F00250E14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08D1B171B6AF22F00250E14 /* ViewController.m */; };
@@ -76,12 +78,15 @@
 		A013899E1BA89B060004E356 /* facilities.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = facilities.geojson; path = ResourcesFiles/facilities.geojson; sourceTree = "<group>"; };
 		A013899F1BA89B060004E356 /* restrooms.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = restrooms.geojson; path = ResourcesFiles/restrooms.geojson; sourceTree = "<group>"; };
 		A01389A01BA89B060004E356 /* trails8.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = trails8.geojson; path = ResourcesFiles/trails8.geojson; sourceTree = "<group>"; };
+		A048F8371BAA57D200F72BBC /* 1point_ldeges_micro.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = 1point_ldeges_micro.gpx; sourceTree = "<group>"; };
+		A048F8381BAA6FA600F72BBC /* myWebsite.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = myWebsite.cer; sourceTree = "<group>"; };
 		A07031671B72485500F02AD9 /* NDLearnAsUGoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDLearnAsUGoTableViewController.h; path = Controller/NDLearnAsUGoTableViewController.h; sourceTree = "<group>"; };
 		A07031681B72485500F02AD9 /* NDLearnAsUGoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDLearnAsUGoTableViewController.m; path = Controller/NDLearnAsUGoTableViewController.m; sourceTree = "<group>"; };
 		A070316C1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDLearnAsUGoHeaderView.h; path = LearnAsUGo/View/NDLearnAsUGoHeaderView.h; sourceTree = "<group>"; };
 		A070316D1B7249E000F02AD9 /* NDLearnAsUGoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDLearnAsUGoHeaderView.m; path = LearnAsUGo/View/NDLearnAsUGoHeaderView.m; sourceTree = "<group>"; };
 		A07031731B724C1500F02AD9 /* ListImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListImageCell.h; path = LearnAsUGo/View/ListImageCell.h; sourceTree = "<group>"; };
 		A07031741B724C1500F02AD9 /* ListImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListImageCell.m; path = LearnAsUGo/View/ListImageCell.m; sourceTree = "<group>"; };
+		A07795321BAA00250021CA27 /* testINADV_micro.GPX */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = testINADV_micro.GPX; path = ResourcesFiles/testINADV_micro.GPX; sourceTree = "<group>"; };
 		A08D1B0C1B6AF22F00250E14 /* n-Discovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "n-Discovery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08D1B101B6AF22F00250E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A08D1B111B6AF22F00250E14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -263,6 +268,7 @@
 		A08D1B0F1B6AF22F00250E14 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A048F8381BAA6FA600F72BBC /* myWebsite.cer */,
 				A09447221B6AF839009268C6 /* Settings.bundle */,
 				A08D1B101B6AF22F00250E14 /* Info.plist */,
 				A08D1B111B6AF22F00250E14 /* main.m */,
@@ -314,11 +320,13 @@
 		A095ACC11BA60024007B445F /* GISFile */ = {
 			isa = PBXGroup;
 			children = (
+				A07795321BAA00250021CA27 /* testINADV_micro.GPX */,
 				A013899C1BA89B060004E356 /* CVNPpos.GPX */,
 				A013899D1BA89B060004E356 /* Directions.geojson */,
 				A013899E1BA89B060004E356 /* facilities.geojson */,
 				A013899F1BA89B060004E356 /* restrooms.geojson */,
 				A01389A01BA89B060004E356 /* trails8.geojson */,
+				A048F8371BAA57D200F72BBC /* 1point_ldeges_micro.gpx */,
 			);
 			name = GISFile;
 			sourceTree = "<group>";
@@ -508,7 +516,9 @@
 				A0A9ADE31B7A803600B1E15B /* userpic6.jpg in Resources */,
 				A01389A11BA89B060004E356 /* CVNPpos.GPX in Resources */,
 				A0A9ADEC1B7A803600B1E15B /* photo3.jpg in Resources */,
+				A048F8391BAA6FA600F72BBC /* myWebsite.cer in Resources */,
 				A08D1B1D1B6AF22F00250E14 /* Images.xcassets in Resources */,
+				A07795331BAA00250021CA27 /* testINADV_micro.GPX in Resources */,
 				A0A9ADEA1B7A803600B1E15B /* photo5.jpg in Resources */,
 				A0A9ADEE1B7A803600B1E15B /* photo1.jpg in Resources */,
 				A0F1EF5E1BA9268300377FBF /* discover_fallcolors.json in Resources */,

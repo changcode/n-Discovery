@@ -8,6 +8,8 @@
 
 #import "SLParallaxController.h"
 
+#import "AFNetworking.h"
+
 #import "NDQuestionTableViewController.h"
 
 #define SCREEN_HEIGHT_WITHOUT_STATUS_BAR     [[UIScreen mainScreen] bounds].size.height - 20
@@ -25,7 +27,7 @@
 #define CLOSE_SHUTTER_LATITUDE_MINUS         .018
 
 
-@interface SLParallaxController ()<UIGestureRecognizerDelegate>
+@interface SLParallaxController ()<UIGestureRecognizerDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic)   UITapGestureRecognizer  *tapMapViewGesture;
 @property (strong, nonatomic)   UITapGestureRecognizer  *tapTableViewGesture;
@@ -36,6 +38,12 @@
 @property (nonatomic)           float                   heightMap;
 
 @property (strong, nonatomic)   NSDictionary            *jsonFromFile;
+
+@property (strong, nonatomic)   CLLocationManager       *locationManager;
+@property (strong, nonatomic)   NSMutableArray          *monitorRegionsArray;
+
+@property (strong, readwrite, nonatomic) NSMutableArray *trailsArray;
+@property (strong, readwrite, nonatomic) NSMutableArray *routePolyLine;
 
 @end
 
@@ -69,7 +77,13 @@
     self.mapView.showsUserLocation = YES;
     [self zoomToUserLocation:self.mapView.userLocation minLatitude:0 animated:YES];
     [self drawFacilities];
+    [self handleLocationMonitor];
     
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    NSLog(@"needs to cancel region");
 }
 
 - (void)didReceiveMemoryWarning
@@ -318,16 +332,6 @@
     [self.mapView setCenterCoordinate:loc zoomLevel:14 animated:YES];
 }
 
-//-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
-//    if(_isShutterOpen)
-//        [self zoomToUserLocation:self.mapView.userLocation
-//                     minLatitude:self.latitudeUserDown
-//                        animated:self.userLocationUpdateAnimated];
-//    else
-//        [self zoomToUserLocation:self.mapView.userLocation
-//                     minLatitude:self.latitudeUserUp
-//                        animated:self.userLocationUpdateAnimated];
-//}
 - (void)drawFacilities
 {
     for (NSDictionary *feature in _jsonFromFile[@"trackpoints"]) {
@@ -348,6 +352,84 @@
 {
     return YES;
 }
+
+- (UIView *)mapView:(MGLMapView *)mapView leftCalloutAccessoryViewForAnnotation:(id <MGLAnnotation>)annotation;
+{
+    return [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+}
+
+- (void)mapView:(MGLMapView *)mapView annotation:(id <MGLAnnotation>)annotation calloutAccessoryControlTapped:(UIControl *)control
+{
+    [mapView removeAnnotations:_routePolyLine];
+    _routePolyLine = [NSMutableArray new];
+    [_routePolyLine removeAllObjects];
+    NSLog(@"User:%f%f",mapView.userLocation.coordinate.latitude, mapView.userLocation.coordinate.longitude);
+    NSLog(@"Curr:%f%f",annotation.coordinate.latitude, annotation.coordinate.longitude);
+    NSString *routeStyle = @"mapbox.walking";
+
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%f,%f;%f,%f%@",@"https://api.mapbox.com/v4/directions", routeStyle, annotation.coordinate.longitude, annotation.coordinate.latitude, mapView.userLocation.coordinate.longitude, mapView.userLocation.coordinate.latitude, @".json?access_token=pk.eyJ1IjoiY2hhbmdzaHUxOTkxIiwiYSI6InlQbmlERXMifQ.c12pyT4RSGAc6N0eloV3Eg"];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"JSON: %@", responseObject[@"routes"]);
+        for (NSDictionary *route in responseObject[@"routes"]) {
+            NSArray *rawCoordinates = route[@"geometry"][@"coordinates"];
+            NSUInteger coordinatesCount = rawCoordinates.count;
+            CLLocationCoordinate2D coordinates[coordinatesCount];
+            for (NSUInteger index = 0; index < coordinatesCount; index++) {
+                NSArray *point = [rawCoordinates objectAtIndex:index];
+                CLLocationDegrees lat = [[point objectAtIndex:1] doubleValue];
+                CLLocationDegrees lng = [[point objectAtIndex:0] doubleValue];
+                CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(lat, lng);
+                coordinates[index] = coordinate;
+            }
+            MGLPolyline *polyline = [MGLPolyline polylineWithCoordinates:coordinates count:coordinatesCount];
+            polyline.title = @"test";
+            [_routePolyLine addObject:polyline];
+        }
+        __weak typeof(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^(void)
+                       {
+                           NSLog(@"JSON: %@", _routePolyLine);
+                           [weakSelf.mapView addAnnotations:_routePolyLine];
+                       });
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+}
+
+- (void)drawTrails
+{
+    dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(backgroundQueue, ^{
+        
+    });
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"trails8" ofType:@"geojson"];
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:[[NSData alloc] initWithContentsOfFile:jsonPath] options:0 error:nil];
+    for (NSDictionary *feature in jsonDict[@"features"]) {
+        NSArray *rawCoordinates = [feature[@"geometry"][@"coordinates"] firstObject];
+        NSUInteger coordinatesCount = rawCoordinates.count;
+        CLLocationCoordinate2D coordinates[coordinatesCount];
+        for (NSUInteger index = 0; index < coordinatesCount; index++) {
+            NSArray *point = [rawCoordinates objectAtIndex:index];
+            CLLocationDegrees lat = [[point objectAtIndex:1] doubleValue];
+            CLLocationDegrees lng = [[point objectAtIndex:0] doubleValue];
+            CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(lat, lng);
+            coordinates[index] = coordinate;
+        }
+        MGLPolyline *polyline = [MGLPolyline polylineWithCoordinates:coordinates count:coordinatesCount];
+        polyline.title = @"trails";
+        [_trailsArray addObject:polyline];
+        //        __weak typeof(self) weakSelf = self;
+        //        dispatch_async(dispatch_get_main_queue(), ^(void)
+        //                       {
+        //                           [weakSelf.mapView addAnnotation:polyline];
+        //                       });
+    }
+}
+
+
 #pragma mark - UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     if (gestureRecognizer == self.tapTableViewGesture) {
@@ -365,5 +447,51 @@
 }
 
 
+- (void)handleLocationMonitor {
+    _locationManager = [CLLocationManager new];
+    _locationManager.delegate = self;
+    [_locationManager requestAlwaysAuthorization];
+    _monitorRegionsArray = [NSMutableArray new];
+    if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
+        for (NSDictionary *point in _jsonFromFile[@"trackpoints"]) {
+            CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:CLLocationCoordinate2DMake([point[@"coordinate"][1] floatValue], [point[@"coordinate"][0] floatValue]) radius:50 identifier:[NSString stringWithString:point[@"title"]]];
+            [_monitorRegionsArray addObject:region];
+            [_locationManager startMonitoringForRegion:region];
+        }
+    }
+    NSLog(@"%@", [_locationManager monitoredRegions]);
+}
+
+
+#pragma mark - Location Manager Delegate
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    _mapView.showsUserLocation = (status == kCLAuthorizationStatusAuthorizedAlways);
+}
+
+-(void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
+{
+    NSLog(@"moinitoring fail!");
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"Location manager failed");
+}
+
+-(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
+{
+    NSLog(@"!!!!");
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enter Region" message:@"You are enter a region" delegate:nil cancelButtonTitle:@"Enter" otherButtonTitles:nil];
+//    [alert show];
+//    NSArray *question;
+//    for (NSDictionary *point in _jsonFromFile[@"trackpoints"]) {
+//        if ([point[@"title"] isEqualToString:region.identifier]) {
+//            question = point[@"questions"];
+//            break;
+//        }
+//    }
+//    [_locationManager stopMonitoringForRegion:region];
+//    [self performSegueWithIdentifier:@"goToQuestion" sender:question];
+}
 
 @end

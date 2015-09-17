@@ -88,7 +88,7 @@
 {
     dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(backgroundQueue, ^{
-        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"restrooms" ofType:@"geojson"];
+        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"facilities" ofType:@"geojson"];
         NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:[[NSData alloc] initWithContentsOfFile:jsonPath] options:0 error:nil];
         for (NSDictionary *feature in jsonDict[@"features"]) {
             MGLPointAnnotation *marker = [[MGLPointAnnotation alloc] init];
@@ -122,7 +122,7 @@
     [_routePolyLine removeAllObjects];
     NSLog(@"User:%f%f",mapView.userLocation.coordinate.latitude, mapView.userLocation.coordinate.longitude);
     NSLog(@"Curr:%f%f",annotation.coordinate.latitude, annotation.coordinate.longitude);
-    NSString *routeStyle = [NSString new];
+    NSString *routeStyle;
 
     switch (_routeStyelSegControl.selectedSegmentIndex) {
         case 0:
@@ -133,6 +133,7 @@
             break;
         case 2:
             routeStyle = cyclying;
+            break;
         default:
             routeStyle = walking;
             break;
@@ -142,7 +143,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.securityPolicy.allowInvalidCertificates = YES;
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject[@"routes"]);
+//        NSLog(@"JSON: %@", responseObject[@"routes"]);
         for (NSDictionary *route in responseObject[@"routes"]) {
             NSArray *rawCoordinates = route[@"geometry"][@"coordinates"];
             NSUInteger coordinatesCount = rawCoordinates.count;
