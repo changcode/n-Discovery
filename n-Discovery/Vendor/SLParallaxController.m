@@ -77,13 +77,22 @@
     self.mapView.showsUserLocation = YES;
     [self zoomToUserLocation:self.mapView.userLocation minLatitude:0 animated:YES];
     [self drawFacilities];
+
+    _monitorRegionsArray = [[NSMutableArray alloc] init];
     [self handleLocationMonitor];
     
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
     NSLog(@"needs to cancel region");
+    for (CLRegion *region in _monitorRegionsArray) {
+        [_locationManager stopMonitoringForRegion:region];
+    }
+            [_monitorRegionsArray removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning
@@ -451,10 +460,12 @@
     _locationManager = [CLLocationManager new];
     _locationManager.delegate = self;
     [_locationManager requestAlwaysAuthorization];
-    _monitorRegionsArray = [NSMutableArray new];
+
+    [_monitorRegionsArray removeAllObjects];
     if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
         for (NSDictionary *point in _jsonFromFile[@"trackpoints"]) {
-            CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:CLLocationCoordinate2DMake([point[@"coordinate"][1] floatValue], [point[@"coordinate"][0] floatValue]) radius:50 identifier:[NSString stringWithString:point[@"title"]]];
+            CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:CLLocationCoordinate2DMake([point[@"coordinate"][1] floatValue], [point[@"coordinate"][0] floatValue]) radius:[point[@"radius"] doubleValue]/3.2 identifier:[NSString stringWithString:point[@"title"]]];
+            NSLog(@"%@", region);
             [_monitorRegionsArray addObject:region];
             [_locationManager startMonitoringForRegion:region];
         }
